@@ -7,7 +7,9 @@ import { BrowserRouter } from 'react-router-dom'
 import WhyOreegi from './components/WhyOreegi'
 // import About from './components/About'
 import Partners from './components/Partners'
-import Services from './components/Services'
+import Microsoft from './components/Microsoft'
+import Domains from './components/Domains'
+import Websites from './components/WebsiteDev'
 import Networking from './components/Networking'
 import Surveillance from './components/Surveillance'
 import Hardware from './components/Hardware'
@@ -17,7 +19,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden font-poppins'>
     <div className='h-screen w-full bg-[#09071f] relative z-0 overflow-x-hidden '>
       <Navbar/>
     <HeroSection/>
@@ -25,7 +27,9 @@ function App() {
     {/* <About/> */}
     <Partners/>
     <WhyOreegi/>
-    <Services/>
+    <Microsoft/>
+    <Domains/>
+    <Websites/>
     <Networking/>
     <Surveillance/>
     <Hardware/>

@@ -1,16 +1,17 @@
 import logo from "./logo.svg"
+import logo_blue from "./logo-blue.svg"
 import menu from "./menu.svg";
 import close from "./close.svg";
-import msp from "./msp.png";
+import msp from "./msp2.png";
 import access from "./microsoft_apps/access.svg"
 import bookings from "./microsoft_apps/bookings.svg"
 import excel from "./microsoft_apps/excel.svg"
-import exchange from "./microsoft_apps/exchange.svg"
+import exchange from "./microsoft_apps/exchange2.svg"
 import forms from "./microsoft_apps/forms.svg"
 import lists from "./microsoft_apps/lists.png"
 import onedrive from "./microsoft_apps/onedrive.svg"
 import onenote from "./microsoft_apps/onenote.svg"
-import outlook from "./microsoft_apps/outlook.svg"
+import outlook from "./microsoft_apps/outlook2.svg"
 import power_apps from "./microsoft_apps/power_apps.svg"
 import power_automate from "./microsoft_apps/power_automate.svg"
 import powerpoint from "./microsoft_apps/powerpoint.svg"
@@ -27,12 +28,15 @@ import windows from "./microsoft_apps/windows.svg"
 import word from "./microsoft_apps/word.svg"
 import yammer from "./microsoft_apps/yammer.svg"
 import hero from "./hero1.jpg"
+import domains_photo from "./domains.jpg"
 import network_photo from "./network.jpg"
 import surveillance_photo from "./surveillance.jpg"
 import hardware_photo from "./hardware.png"
+import website_photo from "./website.jpg"
 
 export {
   logo,
+  logo_blue,
   menu,
   close,
   msp,
@@ -61,7 +65,9 @@ export {
   word,
   yammer,
   hero,
+  domains_photo,
   network_photo,
   surveillance_photo,
   hardware_photo,
+  website_photo,
 };

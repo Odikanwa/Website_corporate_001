@@ -1,11 +1,11 @@
 import {BsShieldFillPlus} from 'react-icons/bs'
-BsShieldFillPlus
+
 const WhyOreegi = () => {
   return (
     <div className='w-[100vw] h-[100vh] bg-[#F8F8FF] text-black px-[10vw] py-[5vh]'>
-       <h1 className="mb-[3vh]">Why Oreegi.</h1>
-       <div className="w-[100%] h-[100%] flex flex-row content-between">
-        <div className="basis-1/2 pr-[19%]">
+       <h1 className="font-bold text-[30px] lg:text-[35px] pt-[5%] pb-[3%]">Why Oreegi</h1>
+       <div className="w-[100%] flex flex-col lg:flex-row content-between">
+        <div className="basis-1/2 pr-[19%] pb-[4%] lg:pb-0">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna 
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -13,24 +13,25 @@ const WhyOreegi = () => {
             </p>
         </div>
         <div className="basis-1/2">
-            <div className='flex flex-row'>
+            <div className='flex flex-row py-[1%]'>
                 <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex flex-row py-[1%]'>
                 <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex flex-row py-[1%]'>
                 <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex flex-row py-[1%]'>
                 <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
             </div>
         </div>
        </div>
+        <h1 className="font-bold text-[33px] lg:text-[45px] text-center pt-[30%] lg:pt-[15%] text-red-500">-- Our Services --</h1>
     </div>
   )
 }
