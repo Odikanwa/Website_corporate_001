@@ -1,8 +1,9 @@
 import { microsoft_365 } from "../constants"
 const Microsoft = () => {
   return (
-    <div className="w-[100vw] h-auto lg:h-[100vh] bg-[#2257bf] text-white px-[10vw] pb-[5vh]">
-      <h1 className="font-bold text-[30px] lg:text-[35px] py-[5%]">Microsoft 365</h1>
+    <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white px-[10vw] pb-[5vh]">
+      <h1 className="font-bold text-[25px] lg:text-[30px] text-center pt-[3vh] lg:text-right text-white">Our Services...</h1>
+      <h1 className="font-bold text-[30px] lg:text-[35px] py-[4%]">Microsoft 365</h1>
       <div className="lg:pr-[35%] pb-[4%] lg:pb-0">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
           sed do eiusmod tempor incididunt ut labore et dolore magna 

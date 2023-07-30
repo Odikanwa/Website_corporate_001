@@ -1,13 +1,22 @@
 import { hero } from "../assets";
 import RoundedButton from "./RoundedButton";
+import Dropdown from "./Dropdown";
+import { DropdownContext  } from "../stateMgt/context";
+import { useContext } from "react";
 
 const HeroSection = () => {
+
+  const {dropdownOpen} = useContext(DropdownContext)
   return (
     <div className="h-[100vh] w-[100vw] ">
         <img src={hero} alt="herosection image" className="h-[100%] w-[100%] object-cover"/>
 
+        <div className="m-0 absolute inset-0 top-[9%] left-[70%] text-center max-w-7xl flex items-start z-10">
+        {dropdownOpen?<Dropdown/>:""}
+          
+        </div>
         <div
-        className={`m-0 absolute inset-0 top-[20%] lg:top-[28%] left-[6%] text-center max-w-7xl flex items-start z-10`}
+        className={`m-0 absolute top-[20%] lg:top-[28%] left-[6%] text-center max-w-7xl flex items-start z-10`}
       >
 
         {/* <div className='bg-[rgba(17,14,51,0.5)] w-[40vw] px-5 py-5 rounded-lg text-white'> */}

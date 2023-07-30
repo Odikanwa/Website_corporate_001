@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import { DropdownContext } from "../stateMgt/context";
 
 const Navbar = () => {
+
+  const {dropdownOpen, setDropdownOpen} = useContext(DropdownContext)
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [navOpacity, setNavOpacity] = useState("bg-opacity-0");
@@ -28,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20 bg-[#2257bf] ${navOpacity}`}
+      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-200 bg-[#2257bf] ${navOpacity}`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -46,15 +49,16 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-[#0ef]" : "text-white"
-              } text-[18px] font-medium cursor-pointer hover:text-[#0ef] animate-slideBottom-animation delay-500`}
+                active === link.title ? "text-[#0ef] underline underline-offset-8" : "text-white"
+              } text-[18px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${link.id}`} onClick={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}>{link.title}{link.icon}</a>
             </li>
           ))}
         </ul>
 
+        {/* For Mobile Screens */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -85,6 +89,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
+          
         </div>
       </div>
     </nav>

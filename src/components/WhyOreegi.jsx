@@ -31,7 +31,6 @@ const WhyOreegi = () => {
             </div>
         </div>
        </div>
-        <h1 className="font-bold text-[33px] lg:text-[45px] text-center pt-[30%] lg:pt-[15%] text-red-500">-- Our Services --</h1>
     </div>
   )
 }

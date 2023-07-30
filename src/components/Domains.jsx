@@ -2,7 +2,7 @@ import { domains_photo } from "../assets";
 const Domains = () => {
   return (
     <div className="h-auto lg:h-[80vh] w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh]">
-      <h1 className="font-bold text-[30px] lg:text-[35px] py-[10%] lg:py-[5%]">Domain Purchase & Hosting</h1>
+      <h1 className="font-bold text-[30px] lg:text-[35px] py-[10%] lg:py-[5%]">Domain Name & Hosting</h1>
       <div className="flex flex-col-reverse lg:flex-row content-between justify-center bg-[#F8F8FF] text-black">
       <div className="w-[100%] lg:w-[50%] lg:pr-[12%]">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 

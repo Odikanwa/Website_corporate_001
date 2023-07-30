@@ -14,13 +14,18 @@ import Networking from './components/Networking'
 import Surveillance from './components/Surveillance'
 import Hardware from './components/Hardware'
 import Footer from './components/Footer'
+import { DropdownContext } from './stateMgt/context'
+import { useState } from 'react'
 
 function App() {
 
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
   return (
     <BrowserRouter>
-    <div className='overflow-x-hidden font-poppins'>
-    <div className='h-screen w-full bg-[#09071f] relative z-0 overflow-x-hidden '>
+    <DropdownContext.Provider value={{dropdownOpen, setDropdownOpen}}>
+    <div className='relative font-poppins lg:text-base overflow-x-clip'>
+    <div className='h-screen w-full bg-[#09071f] relative z-0'>
       <Navbar/>
     <HeroSection/>
     </div>
@@ -35,6 +40,7 @@ function App() {
     <Hardware/>
     <Footer/>
     </div>
+    </DropdownContext.Provider>
     </BrowserRouter>
   )
 }

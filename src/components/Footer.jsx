@@ -1,10 +1,11 @@
 import { logo} from "../assets";
 import {BsMeta, BsTwitter, BsInstagram} from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
+import { styles } from "../styles";
 
 const Footer = () => {
   return (
-    <div className="h-auto lg:h-[60vh] w-[100vw] flex flex-col content-center justify-center place-items-center text-white bg-[#2257bf] px-[10vw] py-[5%]">
+    <div className="h-auto lg:h-[65vh] w-[100vw] flex flex-col content-center justify-center place-items-center text-white bg-[#2257bf] px-[10vw] py-[5%]">
         <div className="h-auto w-[100%] flex flex-row flex-wrap pt-[5%]">
             <div className="flex flex-col w-[50%] lg:w-[33%]">
                 <img src={logo} alt="logo" color="red" width={125} height={95} className=" object-contain mt-0 pt-0" />
@@ -34,10 +35,10 @@ const Footer = () => {
             </div>
             
             <div className="flex flex-row gap-10 justify-center place-items-center">
-                <BsMeta className="h-[40px] w-[40px] px-[8px] text-center rounded-[500px] border-white border-[3px]"/>
-                <BsTwitter className="h-[40px] w-[40px] px-[8px] text-center rounded-[500px] border-white border-[3px] "/>
-                <BsInstagram className="h-[40px] w-[40px] px-[8px] text-center rounded-[500px] border-white border-[3px] "/>
-                <FaLinkedinIn className="h-[40px] w-[40px] px-[8px] text-center rounded-[500px] border-white border-[3px] "/>
+                <BsMeta className={`${styles.socialMediaIcons}`}/>
+                <BsTwitter className={`${styles.socialMediaIcons}`}/>
+                <BsInstagram className={`${styles.socialMediaIcons}`}/>
+                <FaLinkedinIn className={`${styles.socialMediaIcons}`}/>
             </div>
         </div>
     </div>
