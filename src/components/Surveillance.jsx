@@ -1,4 +1,5 @@
 import { surveillance_photo } from "../assets";
+import RoundedButton from "./RoundedButton";
 
 const Surveillance = () => {
   return (
@@ -18,6 +19,7 @@ const Surveillance = () => {
         aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
         ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
+    <RoundedButton>Learn more</RoundedButton>
   </div>
   </div>
   </div>

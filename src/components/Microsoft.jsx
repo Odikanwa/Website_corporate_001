@@ -1,4 +1,5 @@
 import { microsoft_365 } from "../constants"
+import RoundedButton from "./RoundedButton"
 const Microsoft = () => {
   return (
     <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white px-[10vw] pb-[5vh]">
@@ -25,6 +26,7 @@ const Microsoft = () => {
           </div>
         ))}
       </div>
+      <RoundedButton>Learn more</RoundedButton>
     </div>
   )
 }

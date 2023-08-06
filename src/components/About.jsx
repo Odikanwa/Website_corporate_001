@@ -1,34 +1,40 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unknown-property */
-/* eslint-disable react-refresh/only-export-components */
-import { motion } from "framer-motion";
-
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-
+import {BsShieldFillPlus} from 'react-icons/bs'
+import RoundedButton from './RoundedButton';
 
 const About = () => {
   return (
-    <>
-      <motion.div variants={textVariant()} className="overflow-x-none">
-        <p className={styles.sectionSubText}>What we do</p>
-        <h2 className={styles.sectionHeadText}>About.</h2>
-      </motion.div>
+    <div className='w-[100vw] h-[100vh] bg-[#F8F8FF] text-black px-[10vw] py-[5vh]'>
+       <h1 className="font-bold text-[30px] lg:text-[35px] pt-[5%] pb-[3%]">About Oreegi</h1>
+       <div className="w-[100%] flex flex-col lg:flex-row content-between">
+        <div className="basis-1/2 pr-[19%] pb-[4%] lg:pb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+        <div className="basis-1/2">
+            <div className='flex flex-row py-[1%]'>
+                <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </div>
+            <div className='flex flex-row py-[1%]'>
+                <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </div>
+            <div className='flex flex-row py-[1%]'>
+                <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </div>
+            <div className='flex flex-row py-[1%]'>
+                <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </div>
+            <RoundedButton>Learn more</RoundedButton>
+        </div>
+       </div>
+    </div>
+  )
+}
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I&apos;m a technology generalist transitioning to software engineering;
-        passionate aboout bringing ideas to life through computer codes. I&apos;m
-        skilled in JavaScript and Python; and frameworks such as React Native
-        and the MERN stack. I am open to collaborating on interesting projects
-        and entry/trainee software engineer roles. Lemme&apos; help you with the
-        front-end for a start.
-      </motion.p>
-    </>
-  );
-};
-
-export default SectionWrapper(About, "about");
+export default About;

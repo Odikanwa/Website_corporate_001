@@ -15,7 +15,7 @@ const styles = {
   sectionSubText:
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
     socialMediaIcons:
-    "h-[40px] w-[40px] px-[8px] text-center border-white border-[3px] bg-opacity-0 border-2 border-solid border-white rounded-full text-white text-[20px] hover:border-[#0ef] hover:bg-[#0ef] hover:border-[5px] hover:text-black hover:px-[4px] hover:shadow-glow_lg hover:shadow-[#0ef]",
+    "h-[40px] w-[40px] px-[8px] text-center border-white border-[3px] bg-opacity-0 border-2 border-solid border-white rounded-full text-white text-[20px] hover:border-[#0ef] hover:bg-[#0ef] hover:border-[5px] hover:text-black hover:px-[4px] hover:shadow-glow_lg hover:shadow-[#0ef] shadow-lg",
 };
 
 export { styles };

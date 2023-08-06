@@ -1,4 +1,5 @@
 import { network_photo } from "../assets";
+import RoundedButton from "./RoundedButton";
 const Networking = () => {
   return (
     <div className="h-auto lg:h-[80vh] w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh]">
@@ -14,6 +15,7 @@ const Networking = () => {
           aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
           ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
+      <RoundedButton>Learn more</RoundedButton>
     </div>
     <div className="w-[100%] lg:w-[50%] lg:pl-[5%] pt-[9%] lg:pt-[0px] pb-[10%] lg:pb-0 flex text-center justify-center place-items-center">
       <img src={network_photo} alt="network photo" height={450} width={550} className="object-contain rounded-[200px]"/>

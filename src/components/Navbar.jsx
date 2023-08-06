@@ -1,14 +1,18 @@
 import { useState, useEffect, useContext } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
-import { navLinks } from "../constants";
+import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
 import { DropdownContext } from "../stateMgt/context";
 
 const Navbar = () => {
 
-  const {dropdownOpen, setDropdownOpen} = useContext(DropdownContext)
+  
+
+  const {dropdownOpen, setDropdownOpen} = useContext(DropdownContext);
+  const [submenu, setSubmenu] = useState("")
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [navOpacity, setNavOpacity] = useState("bg-opacity-0");
@@ -53,26 +57,32 @@ const Navbar = () => {
               } text-[18px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`} onClick={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}>{link.title}{link.icon}</a>
+              <NavLink to={`/${link.id}`} onClick={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}>{link.title}</NavLink>
+              
+              {/* <a href={`#${link.id}`} onClick={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}>{link.title}</a> */}
             </li>
           ))}
         </ul>
 
         {/* For Mobile Screens */}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="sm:hidden flex flex-1 justify-end items-center z-23 inset-0">
           <img
             src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
+            onClick={() => {
+              setSubmenu("");
+              setToggle(!toggle);
+              
+            }}
           />
 
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 w-[60vw] text-left justify-start rounded-xl z-200`}
           >
-            <ul className="list-none flex flex-col justify-end items-center gap-4">
+            <ul className="list-none flex flex-col justify-start items-left gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
@@ -80,16 +90,31 @@ const Navbar = () => {
                     active === link.title ? "text-[#0ef]" : "text-white"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
-                    setToggle(!toggle);
+                    link.title == "Services" ? setSubmenu("") : setToggle(!toggle);
                     setActive(link.title);
                   }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
+                  {/* Map through the submenu of services */}
+                  {link.title == "Services" && active ? services.map((service) => (
+                    <ul key={service.id}
+                    className= {`${
+                      active === link.title ? "text-[#0ef]" : "text-white hidden"
+                    } font-poppins font-medium cursor-pointer pl-[10px] py-[5px] text-white ${submenu}`}
+                    onClick={() => {
+                      setSubmenu("hidden")
+                      setToggle(false);
+                      setActive(services.title);
+                      console.log(toggle)
+                    }}
+                    >
+                      <a href={`#${service.id}`} onClick={() => setToggle(!toggle)}>{service.title}</a>
+                    </ul>
+                  )):""}
                 </li>
               ))}
             </ul>
-          </div>
-          
+          </div>          
         </div>
       </div>
     </nav>
