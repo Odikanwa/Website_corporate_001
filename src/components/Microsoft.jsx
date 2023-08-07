@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { microsoft_365 } from "../constants"
 import RoundedButton from "./RoundedButton"
 const Microsoft = () => {
@@ -26,9 +27,9 @@ const Microsoft = () => {
           </div>
         ))}
       </div>
-      <RoundedButton>Learn more</RoundedButton>
+      <RoundedButton><Link to='/microsoft365'>Learn more</Link></RoundedButton>
     </div>
   )
 }
 
-export default Microsoft
+export default Microsoft;

@@ -1,5 +1,6 @@
 import {BsShieldFillPlus} from 'react-icons/bs'
 import RoundedButton from './RoundedButton';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -7,10 +8,13 @@ const About = () => {
        <h1 className="font-bold text-[30px] lg:text-[35px] pt-[5%] pb-[3%]">About Oreegi</h1>
        <div className="w-[100%] flex flex-col lg:flex-row content-between">
         <div className="basis-1/2 pr-[19%] pb-[4%] lg:pb-0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            <p className='pb-[2vh]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna 
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt.
             </p>
         </div>
         <div className="basis-1/2">
@@ -30,7 +34,7 @@ const About = () => {
                 <BsShieldFillPlus className='h-[40px] w-[40px] text-green-500 pr-[10px]'/> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
             </div>
-            <RoundedButton>Learn more</RoundedButton>
+            <RoundedButton><Link to='/about'>Learn more</Link></RoundedButton>
         </div>
        </div>
     </div>

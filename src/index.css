@@ -20,12 +20,21 @@
   display: block;
 }
 
+.form-shadow{
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,1), inset 5px 5px 9px rgba(94,104,121,0.5);
+  };
+
+.box-shadow2 {
+  box-shadow: -10px -10px 15px rgba(255,255,255,1),
+  10px 10px 15px rgba(70,70,70,0.12);
+};
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
     #434343,
-    #000000
+    #000000,
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
@@ -270,6 +279,10 @@
   }
 }
 
+.box2{
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  }
+
 @keyframes slideBottom {
   0% {
     transform: translateY(-100px);
@@ -280,3 +293,8 @@
     opacity: 1;
   }
 }
+
+
+
+
+
