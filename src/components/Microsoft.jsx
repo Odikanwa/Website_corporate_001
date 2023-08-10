@@ -3,7 +3,7 @@ import { microsoft_365 } from "../constants";
 import RoundedButton from "./RoundedButton";
 const Microsoft = () => {
   return (
-    <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white px-[10vw] pb-[5vh]">
+    <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white px-[10vw] pb-[10vh]">
       <h1 className="font-bold text-[25px] lg:text-[30px] text-center pt-[3vh] lg:text-right text-white">
         Our Services...
       </h1>

@@ -24,10 +24,8 @@ const HeroSection = () => {
           <h1 className="font-poppins font-bold text-[white] lg:text-[40px] sm:text-[35px] xs:text-[30px] text-[40px] lg:leading-[40px] text-left mt-2 animate-slideRight-animation delay-500 contrast-100 -z-10">
           Your One-stop <span className='text-[#0ef]'>IT Hub.</span>
           </h1>
-          <h5 className="font-poppins text-[white] lg:text-[20px] sm:text-[20px] xs:text-[20px] text-[20px] lg:leading-[20px] lg:mt-6 text-left mt-2 animate-slideRight-animation delay-500 z-11 hidden lg:block">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna 
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          <h5 className="font-poppins text-[white] lg:text-[20px] sm:text-[20px] xs:text-[20px] text-[20px] lg:leading-[25px] lg:mt-6 text-left mt-2 animate-slideRight-animation delay-500 z-11 hidden lg:block">
+          In a world where bits and bytes shape business successes, we stand as your unwavering partner. Our mission is to empower you to achieve more, dream bigger, and seamlessly navigate the ever-evolving landscape of technology. 
           </h5>
           <RoundedButton><Link to="/contact">Contact us</Link></RoundedButton>
         </div>

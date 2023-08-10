@@ -36,7 +36,7 @@ const About = () => {
         </div>
         <div className="basis-1/2">
           <div className="flex flex-row py-[1%]">
-            <BsFillClockFill className="h-[70px] w-[70px] text-cyan-500 pr-[1vw]" />
+            <BsFillClockFill className="lg:h-[70px] h-[120px] lg:w-[70px] w-[120px] text-cyan-500 pr-[4vw] lg:pr-[1vw]" />
             <p className="pb-[1vh]">
               <em className="font-bold">Time & Resource Efficiency:</em> Save
               valuable time and resources by accessing a diverse range of
@@ -45,7 +45,7 @@ const About = () => {
             </p>
           </div>
           <div className="flex flex-row py-[1%]">
-            <FaRecycle className="h-[70px] w-[70px] text-cyan-500 pr-[1vw]" />
+            <FaRecycle className="lg:h-[70px] h-[120px] lg:w-[70px] w-[120px] text-cyan-500 pr-[4vw] lg:pr-[1vw]" />
             <p className="pb-[1vh]">
               <em className="font-bold">Holistic Approach:</em> Achieve a
               comprehensive view of your technology landscape, fostering better
@@ -53,7 +53,7 @@ const About = () => {
             </p>
           </div>
           <div className="flex flex-row py-[1%]">
-            <BsFillSignpostFill className="h-[70px] w-[70px] text-cyan-500 pr-[1vw]" />
+            <BsFillSignpostFill className="lg:h-[70px] h-[120px] lg:w-[70px] w-[120px] text-cyan-500 pr-[4vw] lg:pr-[1vw]" />
             <p className="pb-[1vh]">
               <em className="font-bold">Expert Guidance:</em> Benefit from the
               expertise of professionals who can offer tailored recommendations,
@@ -62,7 +62,7 @@ const About = () => {
             </p>
           </div>
           <div className="flex flex-row py-[1%]">
-            <BsFillRocketTakeoffFill className="h-[70px] w-[70px] text-cyan-500 pr-[1vw]" />
+            <BsFillRocketTakeoffFill className="lg:h-[70px] h-[120px] lg:w-[70px] w-[120px] text-cyan-500 pr-[4vw] lg:pr-[1vw]" />
             <p className="pb-[1vh]">
               <em className="font-bold">Scalability & Adaptability:</em> As
               technology needs evolve, &quot;Oreegi&quot; can adapt and provide
@@ -70,11 +70,11 @@ const About = () => {
             </p>
           </div>
           <div className="flex flex-row py-[1%]">
-            <FaHandshake className="h-[70px] w-[70px] text-cyan-500 pr-[1vw]" />
+            <FaHandshake className="lg:h-[70px] h-[120px] lg:w-[70px] w-[120px] text-cyan-500 pr-[4vw] lg:pr-[1vw]" />
             <p className="pb-[1vh]">
               <em className="font-bold">Collaborative Partnership:</em> Forge a
               collaborative partnership with technology experts who are invested
-              in your success and growth..
+              in your success and growth.
             </p>
           </div>
           <RoundedButton>

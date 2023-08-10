@@ -25,8 +25,8 @@ const ContactUs = () => {
           </div>
           <div className="text-black justify-center place-content-center align-middle text-center">
           <h1 className="text-center">Talk to Sales</h1>
-          <h1 className="font-bold text-[20px]">+234 800 090 0000</h1>
-          <h1 className="font-bold">+234 811 09 0000</h1>
+          <h1 className="font-bold text-[20px]">+234 800 000 0000</h1>
+          <h1 className="font-bold">+234 800 00 0000</h1>
           </div>
         </div>
 
@@ -36,8 +36,8 @@ const ContactUs = () => {
           </div>
           <div className="text-black justify-center place-content-center align-middle text-center">
           <h1 className="text-center">Talk to Support</h1>
-          <h1 className="font-bold text-[20px]">+234 800 090 0000</h1>
-          <h1 className="font-bold">+234 811 09 0000</h1>
+          <h1 className="font-bold text-[20px]">+234 800 000 0000</h1>
+          <h1 className="font-bold">+234 800 00 0000</h1>
           </div>
         </div>
 
