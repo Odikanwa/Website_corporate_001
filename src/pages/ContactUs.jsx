@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import RoundedButton from "../components/RoundedButton";
-import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
+import { BsFillTelephoneOutboundFill,  BsFillChatQuoteFill } from 'react-icons/bs';
 import { BiSupport } from 'react-icons/bi';
+import { AiFillWechat } from 'react-icons/ai';
+
 
 const ContactUs = () => {
 
@@ -43,6 +45,7 @@ const ContactUs = () => {
       <div className={`h-auto w-[90vw] lg:w-[30vw] ml-[5vw] bg-white border-[2px] flex flex-col py-[10vh] px-[5vw] justify-center place-content-center text-center mt-[10vh] lg:mt-[-10vh] rounded-[15px] box-shadow2 shadow-lg`}>
       <form onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
       {/* <Header /> */}
+      <AiFillWechat className="justify-center place-content-center align-middle p-[8px] text-[45px] text-orange-500 border-[2px] border-orange-500 rounded-[50px] ml-[30%]"/>
       <h1 className="text-black text-center pb-[2vh]">Or send us a message . . .</h1>
       <input {...register("firstName")} placeholder="First name"  className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] border-[1px] shadow-lg bg-white form-shadow`}/>
       <input {...register("lastName")} placeholder="Last name"  className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] border-[1px] shadow-lg bg-white form-shadow`}/>

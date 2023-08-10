@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { hero } from "../assets";
 import RoundedButton from "./RoundedButton";
 import Dropdown from "./Dropdown";
@@ -28,7 +29,7 @@ const HeroSection = () => {
           sed do eiusmod tempor incididunt ut labore et dolore magna 
           aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           </h5>
-          <RoundedButton>Contact us</RoundedButton>
+          <RoundedButton><Link to="/contact">Contact us</Link></RoundedButton>
         </div>
         {/* </div> */}
       </div>

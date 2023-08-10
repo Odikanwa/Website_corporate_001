@@ -38,10 +38,10 @@ export const navLinks = [
     id: "partners",
     title: "Partners",
   },
-  {
-    id: "projects",
-    title: "Projects",
-  },
+  // {
+  //   id: "projects",
+  //   title: "Projects",
+  // },
   {
     id: "services",
     title: "Services",
@@ -52,29 +52,29 @@ export const navLinks = [
 
 const services = [
   {
-    id: 0,
+    id: "microsoft365",
     title: "Microsoft 365",
   },
   {
-    id: 1,
+    id: "domainhosting",
     title: "Domain Name & Hosting"
   },
   {
-    id: 2,
+    id: "websitedev",
     title: "Custom Websites"
   },
   {
-    id: 3,
+    id: "lan",
     title: "LAN Design & Implementation"
   },
   {
-    id: 4,
+    id: "surveillance",
     title: "Surveillance Systems"
   },
-  {
-    id: 5,
-    title: "Hardware Marketplace"
-  },
+  // {
+  //   id: "marketplace",
+  //   title: "Hardware Marketplace"
+  // },
 ];
 
 const microsoft_365 = [

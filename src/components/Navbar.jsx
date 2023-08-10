@@ -1,15 +1,17 @@
 import { useState, useEffect, useContext } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-
+import { NavLink, Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom"
 import { styles } from "../styles";
 import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
 import { DropdownContext } from "../stateMgt/context";
+import { redirect } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
 
-  
+  // const navigate = useNavigate();
+  // const location = useLocation();  
 
   const {dropdownOpen, setDropdownOpen} = useContext(DropdownContext);
   const [submenu, setSubmenu] = useState("")
@@ -80,27 +82,32 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 w-[60vw] text-left justify-start rounded-xl z-200`}
+            } p-6 black-gradient bg-slate-200 form-shadow absolute top-20 right-0 mx-4 my-2 w-[60vw] text-left justify-start rounded-xl z-200`}
           >
             <ul className="list-none flex flex-col justify-start items-left gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-[#0ef]" : "text-white"
+                    active === link.title ? "text-[#0ef]" : "text-black"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     link.title == "Services" ? setSubmenu("") : setToggle(!toggle);
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  {/* {link.id !== "services" && navigate(`/${link.id}`)} */}
+                  <Link to={`#${link.id}`}>{link.title}</Link>
+                  {/* <Link to={`#${link.id}`}>{link.title}</Link> */}
+                  {/* {link.id == "services" && redirect(location.pathname)} */}
+                  {/* <a href={`#${link.id}`}>{link.title}</a> */}
                   {/* Map through the submenu of services */}
+                  {/* {link.id == "services"} */}
                   {link.title == "Services" && active ? services.map((service) => (
                     <ul key={service.id}
                     className= {`${
                       active === link.title ? "text-[#0ef]" : "text-white hidden"
-                    } font-poppins font-medium cursor-pointer pl-[10px] py-[5px] text-white ${submenu}`}
+                    } font-poppins font-medium cursor-pointer pl-[10px] py-[5px] text-black ${submenu}`}
                     onClick={() => {
                       setSubmenu("hidden")
                       setToggle(false);
@@ -108,7 +115,8 @@ const Navbar = () => {
                       console.log(toggle)
                     }}
                     >
-                      <a href={`#${service.id}`} onClick={() => setToggle(!toggle)}>{service.title}</a>
+                      <NavLink to={`/${service.id}`} onClick={() => setToggle(!toggle)}>{service.title}</NavLink>
+                      {/* <a href={`#${service.id}`} onClick={() => setToggle(!toggle)}>{service.title}</a> */}
                     </ul>
                   )):""}
                 </li>

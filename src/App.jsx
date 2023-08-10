@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import RootLayout from './layouts/RootLayout';
 import About from './pages/About'
-import Partners from './components/Partners';
+import Partners from './pages/Partners';
 import Projects from './pages/Projects';
 import ContactUs from './pages/ContactUs';
 import Microsoft365 from './pages/Microsoft365';
