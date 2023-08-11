@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -10,6 +11,10 @@ export default {
       poppins: ["Poppins", "sans-serif"]
     }
   },
-  plugins: [],
+  plugins: [
+
+    // eslint-disable-next-line no-undef
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
 

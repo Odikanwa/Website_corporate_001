@@ -1,42 +1,42 @@
-// import { useState } from 'react'
-// import './App.css'
-// import Hero from './components/Hero'
-import HeroSection from './components/HeroSection'
-import Navbar from './components/Navbar'
-import { BrowserRouter } from 'react-router-dom'
-import WhyOreegi from './components/WhyOreegi'
-// import About from './components/About'
-import Partners from './components/Partners'
-import Microsoft from './components/Microsoft'
-import Domains from './components/Domains'
-import Websites from './components/WebsiteDev'
-import Networking from './components/Networking'
-import Surveillance from './components/Surveillance'
-import Hardware from './components/Hardware'
-import Footer from './components/Footer'
+import Home from './pages/Home'
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
+import RootLayout from './layouts/RootLayout';
+import About from './pages/About'
+import Partners from './pages/Partners';
+import Projects from './pages/Projects';
+import ContactUs from './pages/ContactUs';
+import Microsoft365 from './pages/Microsoft365';
+import Dynamics365 from './pages/Dynamics365';
+import DomainHosting from './pages/DomainHosting';
+import Surveillance from './pages/Surveillance';
+import WebsiteDev from './pages/WebsiteDev';
+import Lan from './pages/Lan';
 
-function App() {
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<ContactUs />} />
+      <Route path="partners" element={<Partners />} />
+      <Route path="projects" element={<Projects />} />
+      <Route path="microsoft365" element={<Microsoft365 />} />
+      <Route path="dynamics365" element={<Dynamics365 />} />
+      <Route path="domainhosting" element={<DomainHosting />} />
+      <Route path='websitedev' element={<WebsiteDev/>}/>
+      <Route path="lan" element={<Lan />} />
+      <Route path="surveillance" element={<Surveillance />} />
+    </Route>
+  )
+);
 
+export default function App() {
   return (
-    <BrowserRouter>
-    <div className='overflow-x-hidden font-poppins'>
-    <div className='h-screen w-full bg-[#09071f] relative z-0 overflow-x-hidden '>
-      <Navbar/>
-    <HeroSection/>
-    </div>
-    {/* <About/> */}
-    <Partners/>
-    <WhyOreegi/>
-    <Microsoft/>
-    <Domains/>
-    <Websites/>
-    <Networking/>
-    <Surveillance/>
-    <Hardware/>
-    <Footer/>
-    </div>
-    </BrowserRouter>
+  <RouterProvider router={router} />  
   )
 }
-
-export default App

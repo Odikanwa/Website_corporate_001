@@ -5,34 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  /* Scroll thumb styles */
-  .scrollbar::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-  .scrollbar::-webkit-scrollbar-thumb {
-    background: #0ef;
-    border-radius: 1rem;
-  }
-  .scrollbar::-webkit-scrollbar-thumb:active {
-    background-color: #0ef;
-  }
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #0ef;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Scroll track styles (Background) */
-  .scrollbar::-webkit-scrollbar-track {
-    background: #140e3a;
-    border-radius: 4px;
-  }
-  .scrollbar::-webkit-scrollbar-track:hover,
-  .scrollbar::-webkit-scrollbar-track:active {
-    background: #140e3a;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -48,12 +20,21 @@
   display: block;
 }
 
+.form-shadow{
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,1), inset 5px 5px 9px rgba(94,104,121,0.5);
+  };
+
+.box-shadow2 {
+  box-shadow: -10px -10px 15px rgba(255,255,255,1),
+  10px 10px 15px rgba(70,70,70,0.12);
+};
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
     #434343,
-    #000000
+    #000000,
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
@@ -181,7 +162,8 @@
 
 @font-face {
   font-family: poppins;
-  src: url(../font_poppins/Poppins-Medium.tff);
+  src: url(/font_poppins/Poppins-Regular.ttf);
+  /* src: url(../font_poppins/Poppins-Light.tff); */
 }
 .poppins {
   font-family: poppins;
@@ -298,6 +280,10 @@
   }
 }
 
+.box2{
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  }
+
 @keyframes slideBottom {
   0% {
     transform: translateY(-100px);
@@ -308,3 +294,8 @@
     opacity: 1;
   }
 }
+
+
+
+
+

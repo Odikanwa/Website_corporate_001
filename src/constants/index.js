@@ -1,4 +1,4 @@
-import { msp, access,
+import {access,
   bookings,
   excel,
   exchange,
@@ -23,6 +23,7 @@ import { msp, access,
   yammer,
   word} from "../assets";
 
+import {BsChevronDown} from 'react-icons/bs'
 
 export const navLinks = [
   {
@@ -30,29 +31,50 @@ export const navLinks = [
     title: "About",
   },
   {
+    id: "contact",
+    title: "Contact Us",
+  },
+  {
     id: "partners",
     title: "Partners",
   },
+  // {
+  //   id: "projects",
+  //   title: "Projects",
+  // },
   {
     id: "services",
     title: "Services",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-  },
-  {
-    id: "contact",
-    title: "Contact",
+    icon: BsChevronDown,
   },
 ];
 
 
 const services = [
   {
-    title: "Solutions Partner",
-    icon: msp,
-  }
+    id: "microsoft365",
+    title: "Microsoft 365",
+  },
+  {
+    id: "domainhosting",
+    title: "Domain Name & Hosting"
+  },
+  {
+    id: "websitedev",
+    title: "Custom Websites"
+  },
+  {
+    id: "lan",
+    title: "LAN Design & Implementation"
+  },
+  {
+    id: "surveillance",
+    title: "Surveillance Systems"
+  },
+  // {
+  //   id: "marketplace",
+  //   title: "Hardware Marketplace"
+  // },
 ];
 
 const microsoft_365 = [
