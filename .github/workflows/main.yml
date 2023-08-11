@@ -24,8 +24,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.samkirkland.com
-        username: ${{ secrets.username }}
-        password: ${{ secrets.password }}
+        server: ${{ secrets.GIT_CPANEL_FTP_SERVER }}
+        protocol: ${{ secrets.GIT_CPANEL_FTP_PROTOCOL }}
+        username: ${{ secrets.GIT_CPANEL_FTP_USERNAME }}
+        password: ${{ secrets.GIT_CPANEL_FTP_PASSWORD }}
         server-dir: /oreegi.com/
         local-dir: ./build/
