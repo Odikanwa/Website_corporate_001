@@ -9,7 +9,7 @@ const RootLayout = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden overflow-y-hidden">
     <DropdownContext.Provider value={{dropdownOpen, setDropdownOpen}}></DropdownContext.Provider>
     <header>
       <Navbar/>

@@ -3,8 +3,8 @@ import { network_photo } from "../assets";
 import RoundedButton from "./RoundedButton";
 const Networking = () => {
   return (
-    <div className="h-auto lg:h-[80vh] w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh]">
-      <h1 className="font-bold text-[30px] lg:text-[35px] py-[10%] lg:py-[5%]">
+    <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh] text-[15px] py-[2vh]">
+      <h1 className="font-bold text-[25px] lg:text-[30px] py-[10%] lg:py-[5%]">
         Network Design & Implementation
       </h1>
       <div className="flex flex-col-reverse lg:flex-row content-between justify-center bg-[#F8F8FF] text-black">
@@ -14,7 +14,7 @@ const Networking = () => {
             solutions with our specialized network design and implementation
             services. Our platform is your gateway to unlocking the power of
             seamless communication, robust infrastructure, and optimized network
-            performance. Whether you're a business seeking to enhance
+            performance. Whether you are a business seeking to enhance
             operational efficiency or an organization striving for digital
             transformation, our expertise empowers you to create, implement, and
             manage networks that drive success.

@@ -1,12 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
-import {useNavigate} from "react-router-dom"
 import { styles } from "../styles";
 import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
 import { DropdownContext } from "../stateMgt/context";
-import { redirect } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -56,7 +53,7 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-[#0ef] underline underline-offset-8" : "text-white"
-              } text-[18px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
+              } text-[15px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
               onClick={() => setActive(link.title)}
             >
               <NavLink to={`/${link.id}`} onClick={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}>{link.title}</NavLink>

@@ -162,7 +162,8 @@
 
 @font-face {
   font-family: poppins;
-  src: url(../font_poppins/Poppins-Medium.tff);
+  src: url(/font_poppins/Poppins-Regular.ttf);
+  /* src: url(../font_poppins/Poppins-Light.tff); */
 }
 .poppins {
   font-family: poppins;

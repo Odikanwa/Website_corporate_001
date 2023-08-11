@@ -2,9 +2,9 @@ import { domains_photo } from "../assets";
 
 const DomainHosting = () => {
   return (
-    <div className="h-auto lg:h-auto w-[100vw] bg-[#2257bf] text-white">
+    <div className="h-auto lg:h-auto w-[100vw] bg-[#2257bf] text-white text-[15px]">
       <div className="px-[10vw] pb-[10vh] pt-[10vh]">
-        <h1 className="font-bold text-[30px] lg:text-[35px] py-[10%] lg:py-[5%]">
+        <h1 className="font-bold text-[25px] lg:text-[30px] py-[10%] lg:py-[5%]">
           Domain Name & Hosting
         </h1>
         <div className="flex flex-col-reverse lg:flex-row content-between justify-center bg-[#2257bf]] text-white">
@@ -46,7 +46,7 @@ const DomainHosting = () => {
         </div>
       </div>
 
-      <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pt-[5vh]">
+      <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] py-[5vh]">
         <h1 className="font-bold text-[20px] py-[2vh]">WHY CHOOSE US</h1>
         <div className="w-[100%] lg:w-[60%] pb-[3vh]">
         <p className="pb-[2vh]"><em className="font-bold">Reliable Infrastructure:</em> Our servers ensure high uptime, fast loading speeds, and seamless performance for your website.</p>

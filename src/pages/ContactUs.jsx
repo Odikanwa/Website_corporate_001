@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import RoundedButton from "../components/RoundedButton";
-import { BsFillTelephoneOutboundFill,  BsFillChatQuoteFill } from 'react-icons/bs';
+import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
 import { BiSupport } from 'react-icons/bi';
 import { AiFillWechat } from 'react-icons/ai';
 
@@ -12,8 +12,8 @@ const ContactUs = () => {
   const [data, setData] = useState("");
 
   return (
-    <div className='h-auto w-[100vw] bg-[#2257bf]'>
-      <h1 className="text-center font-bold text-[30px] pt-[20vh]">Get in Touch</h1>
+    <div className='h-auto w-[100vw] bg-[#2257bf] text-[15px]'>
+      <h1 className="text-center font-bold text-[25px] pt-[20vh]">Get in Touch</h1>
       <p className="text-center pb-[20vh] pt-[5vh]">Want to get in touch? We&apos;d love to hear from you. Here is how you can reach us.</p>
 
       <div className="h-auto lg:h-[80vh] w-[100vw] bg-[#F8F8FF] flex flex-col lg:flex-row justify-center gap-[8vw] pb-[10vh]">

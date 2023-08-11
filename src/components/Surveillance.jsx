@@ -4,8 +4,8 @@ import RoundedButton from "./RoundedButton";
 
 const Surveillance = () => {
   return (
-    <div className="h-auto lg:h-[80vh] w-[100vw] bg-[#2257bf] text-white px-[10vw] pb-[10vh]">
-      <h1 className="font-bold text-[30px] lg:text-[35px] py-[10%] lg:py-[5%]">
+    <div className="h-auto w-[100vw] bg-[#2257bf] text-white px-[10vw] pb-[10vh] text-[15px] py-[3vh]">
+      <h1 className="font-bold text-[25px] lg:text-[30px] py-[10%] lg:py-[5%]">
         Surveillance Systems
       </h1>
       <div className="flex flex-col lg:flex-row content-between justify-center ">
