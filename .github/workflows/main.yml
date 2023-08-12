@@ -20,6 +20,15 @@ jobs:
       run: |
         npm install
         npm run build
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        # Upload dist repository
+        path: './dist'
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -30,6 +39,7 @@ jobs:
         password: ${{ secrets.GIT_CPANEL_FTP_PASSWORD }}
         port: ${{ secrets.GIT_CPANEL_FTP_PORT }}
         server-dir: /oreegi.com/
+        local-dir: ./dist/
         exclude: |
           **/.git*
           **/.git*/**
