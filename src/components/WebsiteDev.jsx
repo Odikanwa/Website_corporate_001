@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { website_photo } from "../assets";
 import RoundedButton from "./RoundedButton";
+import GoToTop from "./GoToTop";
 
 const Websites = () => {
   return (
@@ -34,9 +35,7 @@ const Websites = () => {
             or an entrepreneur, our templates offer a gateway to a captivating
             and immersive digital journey.
           </p>
-          <RoundedButton>
-            <Link to="/websitedev">Learn more</Link>
-          </RoundedButton>
+            <Link to="/websitedev" onClick={() => GoToTop()}><RoundedButton>Learn more</RoundedButton></Link>
         </div>
       </div>
     </div>

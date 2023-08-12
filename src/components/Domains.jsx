@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { domains_photo } from "../assets";
 import RoundedButton from "./RoundedButton";
+import GoToTop from "./GoToTop";
 
 const Domains = () => {
   return (
@@ -24,9 +25,10 @@ const Domains = () => {
             value-driven solutions to help our clients thrive in the digital
             age.
           </p>
-          <RoundedButton>
-            <Link to="/domainhosting">Learn more</Link>
-          </RoundedButton>
+
+          <Link to="/domainhosting" onClick={() => GoToTop()}>
+            <RoundedButton>Learn more</RoundedButton>
+          </Link>
         </div>
         <div className="w-[100%] lg:w-[50%] lg:pl-[5%] pt-[9%] lg:pt-[0px] pb-[10%] lg:pb-0 flex text-center justify-center place-items-center">
           <img

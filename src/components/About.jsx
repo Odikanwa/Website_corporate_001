@@ -1,7 +1,8 @@
-import { BsFillClockFill, BsFillRocketTakeoffFill, BsFillSignpostFill } from "react-icons/bs";
-import { FaRecycle, FaHandshake} from "react-icons/fa";
+import { BsFillClockFill, BsFillSignpostFill } from "react-icons/bs";
+import { FaRecycle } from "react-icons/fa";
 import RoundedButton from "./RoundedButton";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import GoToTop from "./GoToTop";
 
 const About = () => {
   return (
@@ -52,25 +53,7 @@ const About = () => {
               domains.
             </p>
           </div>
-          {/* <div className="flex flex-row py-[1%]">
-            <BsFillRocketTakeoffFill className="lg:h-[70px] h-[120px] lg:w-[70px] w-[120px] text-cyan-500 pr-[4vw] lg:pr-[1vw]" />
-            <p className="pb-[1vh]">
-              <em className="font-bold">Scalability & Adaptability:</em> As
-              technology needs evolve, &quot;Oreegi&quot; can adapt and provide
-              solutions that align with changing requirements.
-            </p>
-          </div> */}
-          {/* <div className="flex flex-row py-[1%]">
-            <FaHandshake className="lg:h-[70px] h-[120px] lg:w-[70px] w-[120px] text-cyan-500 pr-[4vw] lg:pr-[1vw]" />
-            <p className="pb-[1vh]">
-              <em className="font-bold">Collaborative Partnership:</em> Forge a
-              collaborative partnership with technology experts who are invested
-              in your success and growth.
-            </p>
-          </div> */}
-          <RoundedButton>
-            <Link to="/about">Learn more</Link>
-          </RoundedButton>
+          <NavLink to="/about" onClick={() => GoToTop()}><RoundedButton>Learn more</RoundedButton></NavLink>
         </div>
       </div>
     </div>

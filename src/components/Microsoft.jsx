@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { microsoft_365 } from "../constants";
 import RoundedButton from "./RoundedButton";
+import GoToTop from "./GoToTop";
+
 const Microsoft = () => {
   return (
     <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white text-[15px] px-[10vw] pb-[10vh]">
@@ -41,9 +43,9 @@ const Microsoft = () => {
           </div>
         ))}
       </div>
-      <RoundedButton>
-        <Link to="/microsoft365">Learn more</Link>
-      </RoundedButton>
+      <Link to="/microsoft365" onClick={() => GoToTop()}>
+        <RoundedButton>Learn more</RoundedButton>
+      </Link>
     </div>
   );
 };

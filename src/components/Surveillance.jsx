@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { surveillance_photo } from "../assets";
 import RoundedButton from "./RoundedButton";
+import GoToTop from "./GoToTop";
 
 const Surveillance = () => {
   return (
@@ -29,9 +30,9 @@ const Surveillance = () => {
             organization, our advanced surveillance systems redefine how you
             safeguard your assets and ensure peace of mind.
           </p>
-          <RoundedButton>
-            <Link to="surveillance">Learn more</Link>
-          </RoundedButton>
+          <Link to="surveillance" onClick={() => GoToTop()}>
+            <RoundedButton>Learn more</RoundedButton>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { network_photo } from "../assets";
 import RoundedButton from "./RoundedButton";
+import GoToTop from "./GoToTop";
+
 const Networking = () => {
   return (
     <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh] text-[15px] py-[2vh]">
@@ -19,9 +21,10 @@ const Networking = () => {
             transformation, our expertise empowers you to create, implement, and
             manage networks that drive success.
           </p>
-          <RoundedButton>
-            <Link to="/lan">Learn more</Link>
-          </RoundedButton>
+
+          <Link to="/lan" onClick={() => GoToTop()}>
+            <RoundedButton>Learn more</RoundedButton>
+          </Link>
         </div>
         <div className="w-[100%] lg:w-[50%] lg:pl-[5%] pt-[9%] lg:pt-[0px] pb-[10%] lg:pb-0 flex text-center justify-center place-items-center">
           <img

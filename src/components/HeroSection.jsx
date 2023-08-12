@@ -4,6 +4,7 @@ import RoundedButton from "./RoundedButton";
 import Dropdown from "./Dropdown";
 import { DropdownContext  } from "../stateMgt/context";
 import { useContext } from "react";
+import GoToTop from "./GoToTop";
 
 const HeroSection = () => {
 
@@ -27,7 +28,7 @@ const HeroSection = () => {
           <h5 className="font-poppins text-[white] text-[16px] lg:leading-[20px] lg:mt-6 text-left mt-2 animate-slideRight-animation delay-500 z-11 hidden lg:block">
           In a world where bits and bytes shape business successes, we stand as your unwavering partner. Our mission is to empower you to achieve more, dream bigger, and seamlessly navigate the ever-evolving landscape of technology. 
           </h5>
-          <RoundedButton><Link to="/contact">Contact us</Link></RoundedButton>
+          <Link to="/contact" onClick={() => GoToTop()}><RoundedButton>Contact us</RoundedButton></Link>
         </div>
         {/* </div> */}
       </div>

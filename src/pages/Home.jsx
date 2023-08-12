@@ -8,6 +8,7 @@ import Websites from '../components/WebsiteDev'
 import Networking from '../components/Networking'
 import Surveillance from '../components/Surveillance'
 import Hardware from '../components/Hardware'
+import GoToTop from '../components/GoToTop'
 // import Footer from '../components/Footer'
 
 function Home() {
@@ -27,6 +28,7 @@ function Home() {
     <Networking/>
     <Surveillance/>
     <Hardware/>
+    <GoToTop/>
     {/* <Footer/> */}
     </div>
   )
