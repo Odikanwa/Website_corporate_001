@@ -36,8 +36,8 @@ jobs:
         password: ${{ secrets.GIT_CPANEL_FTP_PASSWORD }}
         port: ${{ secrets.GIT_CPANEL_FTP_PORT }}
         dangerous-clean-slate: true
-        server-dir: /oreegi.com/
-        local-dir: ./build/
+        # server-dir: /oreegi.com/
+        # local-dir: ./dist/
         exclude: |
           **/.git*
           **/.git*/**
