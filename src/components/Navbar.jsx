@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
 import { DropdownContext } from "../stateMgt/context";
+import GoToTop from "./GoToTop";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -70,7 +71,7 @@ const Navbar = () => {
                   link.title == "Services"
                     ? setDropdownOpen(!dropdownOpen)
                     : setDropdownOpen(false);
-                  navigate(`/${link.id}`);
+                    GoToTop();
                 }}
                 onMouseOver={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}
               >
