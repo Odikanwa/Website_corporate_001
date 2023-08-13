@@ -1,17 +1,17 @@
 import { useState, useEffect, useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
 import { DropdownContext } from "../stateMgt/context";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  // const location = useLocation();
 
-  // const navigate = useNavigate();
-  // const location = useLocation();  
-
-  const {dropdownOpen, setDropdownOpen} = useContext(DropdownContext);
-  const [submenu, setSubmenu] = useState("")
+  const { dropdownOpen, setDropdownOpen } = useContext(DropdownContext);
+  const [submenu, setSubmenu] = useState("");
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [navOpacity, setNavOpacity] = useState("bg-opacity-0");
@@ -45,19 +45,37 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" width={125} height={95} className=" object-contain mt-0 pt-0" />
+          <img
+            src={logo}
+            alt="logo"
+            width={125}
+            height={95}
+            className=" object-contain mt-0 pt-0"
+          />
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-[#0ef] underline underline-offset-8" : "text-white"
+                active === link.title
+                  ? "text-[#0ef] underline underline-offset-8"
+                  : "text-white"
               } text-[15px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
               onClick={() => setActive(link.title)}
             >
-              <NavLink to={`/${link.id}`} onClick={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}>{link.title}</NavLink>
-              
+              <NavLink
+              to={`/${link.id}`}
+                onClick={() => {
+                  link.title == "Services"
+                    ? setDropdownOpen(!dropdownOpen)
+                    : setDropdownOpen(false);
+                  navigate(`/${link.id}`);
+                  console.log(link.id, dropdownOpen);
+                }}
+              >
+                {link.title}
+              </NavLink>
               {/* <a href={`#${link.id}`} onClick={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}>{link.title}</a> */}
             </li>
           ))}
@@ -72,7 +90,6 @@ const Navbar = () => {
             onClick={() => {
               setSubmenu("");
               setToggle(!toggle);
-              
             }}
           />
 
@@ -89,37 +106,51 @@ const Navbar = () => {
                     active === link.title ? "text-[#0ef]" : "text-black"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
-                    link.title == "Services" ? setSubmenu("") : setToggle(!toggle);
+                    link.title == "Services"
+                      ? setSubmenu("")
+                      : setToggle(!toggle);
                     setActive(link.title);
                   }}
                 >
                   {/* {link.id !== "services" && navigate(`/${link.id}`)} */}
-                  <Link to={`#${link.id}`}>{link.title}</Link>
-                  {/* <Link to={`#${link.id}`}>{link.title}</Link> */}
+                  <Link onClick={() => navigate(`/${link.id}`)}>
+                    {link.title}
+                  </Link>
+                  {/* <Link to={`/${link.id}`}>{link.title}</Link> */}
                   {/* {link.id == "services" && redirect(location.pathname)} */}
                   {/* <a href={`#${link.id}`}>{link.title}</a> */}
                   {/* Map through the submenu of services */}
                   {/* {link.id == "services"} */}
-                  {link.title == "Services" && active ? services.map((service) => (
-                    <ul key={service.id}
-                    className= {`${
-                      active === link.title ? "text-[#0ef]" : "text-white hidden"
-                    } font-poppins font-medium cursor-pointer pl-[10px] py-[5px] text-black ${submenu}`}
-                    onClick={() => {
-                      setSubmenu("hidden")
-                      setToggle(false);
-                      setActive(services.title);
-                      console.log(toggle)
-                    }}
-                    >
-                      <NavLink to={`/${service.id}`} onClick={() => setToggle(!toggle)}>{service.title}</NavLink>
-                      {/* <a href={`#${service.id}`} onClick={() => setToggle(!toggle)}>{service.title}</a> */}
-                    </ul>
-                  )):""}
+                  {link.title == "Services" && active
+                    ? services.map((service) => (
+                        <ul
+                          key={service.id}
+                          className={`${
+                            active === link.title
+                              ? "text-[#0ef]"
+                              : "text-white hidden"
+                          } font-poppins font-medium cursor-pointer pl-[10px] py-[5px] text-black ${submenu}`}
+                          onClick={() => {
+                            setSubmenu("hidden");
+                            setToggle(false);
+                            setActive(services.title);
+                            console.log(toggle);
+                          }}
+                        >
+                          <NavLink
+                            to={`/${service.id}`}
+                            onClick={() => setToggle(!toggle)}
+                          >
+                            {service.title}
+                          </NavLink>
+                          {/* <a href={`#${service.id}`} onClick={() => setToggle(!toggle)}>{service.title}</a> */}
+                        </ul>
+                      ))
+                    : ""}
                 </li>
               ))}
             </ul>
-          </div>          
+          </div>
         </div>
       </div>
     </nav>

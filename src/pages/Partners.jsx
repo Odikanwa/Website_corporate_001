@@ -2,7 +2,7 @@ import { msp } from "../assets";
 
 const Partners = () => {
   return (
-    <div className="h-auto lg:auto w-[100vw] bg-[#2257bf] text-white text-[15px]">
+    <div className="h-auto lg:auto w-[100vw] bg-[#2257bf] text-white text-[14px]">
       <div className="px-[10vw] pb-[10vh] pt-[10vh]">
         <h1 className="font-bold text-[25px] lg:text-[30px] py-[10%] lg:py-[5%]">
           Microsoft (CSP)

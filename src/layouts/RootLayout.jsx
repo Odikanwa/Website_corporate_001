@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar"
 import { Outlet } from "react-router-dom"
 import { DropdownContext } from "../stateMgt/context"
 import { useState } from "react"
+import Dropdown from "../components/Dropdown"
 
 const RootLayout = () => {
 
@@ -10,11 +11,15 @@ const RootLayout = () => {
   
   return (
     <div className="overflow-x-hidden overflow-y-hidden">
-    <DropdownContext.Provider value={{dropdownOpen, setDropdownOpen}}></DropdownContext.Provider>
+    <DropdownContext.Provider value={{dropdownOpen, setDropdownOpen}}>
     <header>
       <Navbar/>
     </header>
     
+    <div className="hidden lg:flex m-0 absolute inset-0 top-[9%] left-[70%] text-center max-w-7xl items-start z-10">
+        <Dropdown/>
+        </div>
+
     <main>
       <Outlet/>
     </main>
@@ -22,7 +27,7 @@ const RootLayout = () => {
     <footer>
       <Footer/>
     </footer>
-    <DropdownContext.Provider/>
+    </DropdownContext.Provider>
     </div>
   )
 }

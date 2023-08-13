@@ -6,12 +6,12 @@ import GoToTop from "./GoToTop";
 
 const About = () => {
   return (
-    <div className="w-[100vw] h-auto bg-[#F8F8FF] text-black px-[10vw] pt-[5vh] py-[10vh] text-[15px]">
-      <h1 className="font-bold text-[25px] lg:text-[30px] pt-[5%] pb-[3%]">
+    <div className="w-[100vw] h-auto bg-[#F8F8FF] text-black px-[10vw] pt-[5vh] py-[10vh] text-[14px]">
+      <h1 className="font-bold text-[20px] lg:text-[25px] pt-[5%] pb-[3%]">
         About Oreegi
       </h1>
       <div className="w-[100%] flex flex-col lg:flex-row content-between">
-        <div className="basis-1/2 pr-[10%] pb-[4%] lg:pb-0">
+        <div className="basis-1/2 lg:pr-[10%] pb-[4%] lg:pb-0">
           <p className="pb-[2vh]">
             In today&apos;s dynamic and interconnected world, businesses and
             individuals alike rely heavily on technology to drive efficiency,
@@ -22,12 +22,12 @@ const About = () => {
             technology requirements, offering a comprehensive and seamless
             experience.
           </p>
-          <h1 className="font-bold text-[18px] py-[2vh]">
+          <h1 className="font-bold text-[16px] ">
             KEY BENEFITS &gt; &gt;
           </h1>
         </div>
         <div className="basis-1/2">
-          <div className="flex flex-row py-[1%]">
+          <div className="flex flex-row py-[0.5%]">
             <BsFillClockFill className="lg:h-[70px] h-[120px] lg:w-[70px] w-[120px] text-cyan-500 pr-[4vw] lg:pr-[1vw]" />
             <p className="pb-[1vh]">
               <em className="font-bold">Time & Resource Efficiency:</em> Save

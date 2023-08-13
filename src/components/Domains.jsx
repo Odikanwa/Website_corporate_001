@@ -5,8 +5,8 @@ import GoToTop from "./GoToTop";
 
 const Domains = () => {
   return (
-    <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh] text-[15px] py-[3vh]">
-      <h1 className="font-bold text-[25px] lg:text-[30px] py-[10%] lg:py-[5%]">
+    <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh] text-[14px] py-[3vh]">
+      <h1 className="font-bold text-[20px] lg:text-[25px] py-[5%] lg:py-[3%]">
         Domain Name & Hosting
       </h1>
       <div className="flex flex-col-reverse lg:flex-row content-between justify-center bg-[#F8F8FF] text-black">
@@ -30,7 +30,7 @@ const Domains = () => {
             <RoundedButton>Learn more</RoundedButton>
           </Link>
         </div>
-        <div className="w-[100%] lg:w-[50%] lg:pl-[5%] pt-[9%] lg:pt-[0px] pb-[10%] lg:pb-0 flex text-center justify-center place-items-center">
+        <div className="w-[100%] lg:w-[50%] lg:pr-[10%] py-[10%] lg:py-0 flex text-center justify-center place-items-start">
           <img
             src={domains_photo}
             alt="domains photo"

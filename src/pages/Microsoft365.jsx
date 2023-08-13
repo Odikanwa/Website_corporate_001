@@ -3,7 +3,7 @@ import { m365 } from "../assets";
 
 const Microsoft365 = () => {
   return (
-    <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white text-[15px]">
+    <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white text-[14px]">
       <div className="px-[10vw] pb-[10vh] pt-[10vh]">
         <h1 className="font-bold text-[25px] lg:text-[30px] py-[10%] lg:py-[5%]">
           Microsoft 365
@@ -13,15 +13,15 @@ const Microsoft365 = () => {
             <img
               src={m365}
               alt="network photo"
-              height={250}
-              width={350}
+              height={230}
+              width={330}
               className="object-contain rounded-[200px]"
             />
           </div>
           <div className="w-[100%] lg:w-[50%] lg:pl-[8%] lg:mr-[5%]">
             <p className="pb-[2vh]">
               Microsoft 365, a comprehensive suite of productivity tools and
-              cloud-based services developed by Microsoft Corporation, is
+              cloud-based services developed by Microsoft Corporation. It is
               designed to empower individuals, teams, and businesses to achieve
               their goals with enhanced efficiency and collaboration. Launched
               in April 2020, Microsoft 365 represents a transformative shift in
@@ -67,7 +67,7 @@ const Microsoft365 = () => {
         </div>
       </div>
 
-      <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pt-[10vh]">
+      <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw]">
         <h1 className="font-bold text-[20px] py-[4vh] px-7">KEY OFFERINGS</h1>
         <div className="flex flex-col lg:flex-row flex-wrap content-between w-[100%]">
           {microsoft_365.map((items) => (

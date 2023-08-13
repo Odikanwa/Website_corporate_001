@@ -6,7 +6,7 @@ import { styles } from "../styles";
 
 const Footer = () => {
   return (
-    <div className="h-auto lg:h-[65vh] w-[100vw] flex flex-col content-center justify-center place-items-center text-white bg-[#2257bf] px-[10vw] py-[3vh] text-[15px]">
+    <div className="h-auto lg:h-[65vh] w-[100vw] flex flex-col content-center justify-center place-items-center text-white bg-[#2257bf] px-[10vw] py-[3vh] text-[14px]">
         <div className="h-auto w-[100%] flex flex-row flex-wrap pt-[5%]">
             <div className="flex flex-col w-[50%] lg:w-[33%]">
                 <img src={logo} alt="logo" color="red" width={125} height={95} className=" object-contain mt-0 pt-0" />

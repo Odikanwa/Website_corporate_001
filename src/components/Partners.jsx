@@ -12,7 +12,7 @@ const Partners = () => {
         />
       </div>
 
-      <div className="hidden lg:flex h-[100%] w-[50vw] content-center justify-center place-items-center text-center text-[15px] pl-[5%] pr-[15%] py-[5%] bg-[#F8F8FF] text-black border-dashed border-black shadow-md">
+      <div className="hidden lg:flex h-[100%] w-[50vw] content-center justify-center place-items-center text-center text-[13px] pl-[5%] pr-[15%] py-[5%] bg-[#F8F8FF] text-black border-dashed border-black shadow-md">
         <p>
           Partnering with Microsoft opens the doors to a world of innovation,
           collaboration, and growth. As a global technology leader, Microsoft
