@@ -9,9 +9,6 @@ import { DropdownContext } from "../stateMgt/context";
 const Navbar = () => {
   const navigate = useNavigate();
   // const location = useLocation();
-  const onHover = (e) => {
-    e.target.style.hover = "text-green-500"
-  }
 
   const { dropdownOpen, setDropdownOpen } = useContext(DropdownContext);
   const [submenu, setSubmenu] = useState("");
