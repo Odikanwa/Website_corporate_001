@@ -30,6 +30,7 @@ const router = createBrowserRouter(
       <Route path="domainhosting" element={<DomainHosting />} />
       <Route path='websitedev' element={<WebsiteDev/>}/>
       <Route path="lan" element={<Lan />} />
+      <Route path="services" element={<Home />} />
       <Route path="surveillance" element={<Surveillance />} />
     </Route>
   )

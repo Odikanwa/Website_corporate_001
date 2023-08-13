@@ -9,6 +9,9 @@ import { DropdownContext } from "../stateMgt/context";
 const Navbar = () => {
   const navigate = useNavigate();
   // const location = useLocation();
+  const onHover = (e) => {
+    e.target.style.hover = "text-green-500"
+  }
 
   const { dropdownOpen, setDropdownOpen } = useContext(DropdownContext);
   const [submenu, setSubmenu] = useState("");
@@ -63,20 +66,20 @@ const Navbar = () => {
                   : "text-white"
               } text-[15px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
               onClick={() => setActive(link.title)}
+             
             >
-              <NavLink
-              to={`/${link.id}`}
+              <NavLink to={`/${link.id}`}
                 onClick={() => {
                   link.title == "Services"
                     ? setDropdownOpen(!dropdownOpen)
                     : setDropdownOpen(false);
                   navigate(`/${link.id}`);
-                  console.log(link.id, dropdownOpen);
                 }}
+                onMouseOver={() => { link.title == "Services" && setDropdownOpen(!dropdownOpen); setActive(link.title)}}
               >
                 {link.title}
               </NavLink>
-              {/* <a href={`#${link.id}`} onClick={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}>{link.title}</a> */}
+              
             </li>
           ))}
         </ul>
@@ -112,15 +115,9 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  {/* {link.id !== "services" && navigate(`/${link.id}`)} */}
                   <Link onClick={() => navigate(`/${link.id}`)}>
                     {link.title}
                   </Link>
-                  {/* <Link to={`/${link.id}`}>{link.title}</Link> */}
-                  {/* {link.id == "services" && redirect(location.pathname)} */}
-                  {/* <a href={`#${link.id}`}>{link.title}</a> */}
-                  {/* Map through the submenu of services */}
-                  {/* {link.id == "services"} */}
                   {link.title == "Services" && active
                     ? services.map((service) => (
                         <ul
@@ -143,7 +140,6 @@ const Navbar = () => {
                           >
                             {service.title}
                           </NavLink>
-                          {/* <a href={`#${service.id}`} onClick={() => setToggle(!toggle)}>{service.title}</a> */}
                         </ul>
                       ))
                     : ""}
