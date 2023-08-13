@@ -47,10 +47,10 @@ const ContactUs = () => {
       {/* <Header /> */}
       <AiFillWechat className="justify-center place-content-center align-middle p-[8px] text-[45px] text-orange-500 border-[2px] border-orange-500 rounded-[50px] ml-[30%]"/>
       <h1 className="text-black text-center pb-[2vh]">Or send us a message . . .</h1>
-      <input {...register("firstName")} placeholder="First name"  className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] border-[1px] shadow-lg bg-white form-shadow`}/>
-      <input {...register("lastName")} placeholder="Last name"  className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] border-[1px] shadow-lg bg-white form-shadow`}/>
-      <input {...register("email")} placeholder="Email"  className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] border-[1px] shadow-lg bg-white form-shadow`}/>
-      <textarea {...register("message")} placeholder="Your message" className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[10px] border-[1px] shadow-lg bg-white form-shadow`}/>
+      <input {...register("firstName")} placeholder="First name"  className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] text-black border-[1px] shadow-lg bg-white form-shadow`}/>
+      <input {...register("lastName")} placeholder="Last name"  className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] text-black border-[1px] shadow-lg bg-white form-shadow`}/>
+      <input {...register("email")} placeholder="Email"  className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] text-black border-[1px] shadow-lg bg-white form-shadow`}/>
+      <textarea {...register("message")} placeholder="Your message" className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[10px] text-black border-[1px] shadow-lg bg-white form-shadow`}/>
       <p>{data}</p>
       {/* <input type="submit" /> */}
       <RoundedButton>Send</RoundedButton>
