@@ -63,20 +63,19 @@ const Navbar = () => {
                   : "text-white"
               } text-[15px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
               onClick={() => setActive(link.title)}
-             
             >
-              <NavLink to={`/${link.id}`}
+              <NavLink
+                to={`/${link.id}`}
                 onClick={() => {
                   link.title == "Services"
                     ? setDropdownOpen(!dropdownOpen)
                     : setDropdownOpen(false);
                   navigate(`/${link.id}`);
                 }}
-                onMouseOver={() => { link.title == "Services" && setDropdownOpen(!dropdownOpen); setActive(link.title)}}
+                onMouseOver={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}
               >
                 {link.title}
               </NavLink>
-              
             </li>
           ))}
         </ul>
