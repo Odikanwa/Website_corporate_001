@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { hero } from "../assets";
 import RoundedButton from "./RoundedButton";
-import Dropdown from "./Dropdown";
+// import Dropdown from "./Dropdown";
 import GoToTop from "./GoToTop";
 
 const HeroSection = () => {
@@ -10,9 +10,9 @@ const HeroSection = () => {
     <div className="h-[100vh] w-[100vw] ">
         <img src={hero} alt="herosection image" className="h-[100%] w-[100%] object-cover"/>
 
-        <div className="hidden lg:flex m-0 absolute inset-0 top-[9%] left-[70%] text-center max-w-7xl items-start z-10">
+        {/* <div className="hidden lg:flex m-0 absolute inset-0 top-[9%] left-[70%] text-center max-w-7xl items-start z-10">
         <Dropdown/>
-        </div>
+        </div> */}
         <div
         className={`m-0 absolute top-[20%] lg:top-[28%] left-[6%] text-center max-w-7xl flex items-start z-10`}
       >

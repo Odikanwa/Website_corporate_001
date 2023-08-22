@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-200 bg-[#2257bf] ${navOpacity}`}
+      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20 bg-[#2257bf] ${navOpacity}`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -62,7 +62,7 @@ const Navbar = () => {
                 active === link.title
                   ? "text-[#0ef] underline underline-offset-8"
                   : "text-white"
-              } text-[15px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
+              } text-[14px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
               onClick={() => setActive(link.title)}
             >
               <NavLink
