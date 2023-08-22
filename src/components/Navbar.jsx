@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
@@ -9,7 +9,6 @@ import GoToTop from "./GoToTop";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  // const location = useLocation();
 
   const { dropdownOpen, setDropdownOpen } = useContext(DropdownContext);
   const [submenu, setSubmenu] = useState("");
@@ -17,12 +16,24 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [navOpacity, setNavOpacity] = useState("bg-opacity-0");
 
+  let navLinkRef = useRef();
+
   useEffect(() => {
+    
+    
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousedown", handleDropdown)
     return () => {
       window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("mousedown", handleDropdown);
     };
   });
+
+  const handleDropdown = (e) => {
+    if(!navLinkRef.current.contains(e.target)){
+      setDropdownOpen(false)
+    }
+  }
 
   const handleScroll = () => {
     if (window.scrollY) {
@@ -66,6 +77,7 @@ const Navbar = () => {
               onClick={() => setActive(link.title)}
             >
               <NavLink
+              ref={navLinkRef}
                 to={`/${link.id}`}
                 onClick={() => {
                   link.title == "Services"
