@@ -78,7 +78,7 @@ const Navbar = () => {
                 ref={navLinkRef}
                 to={`/${link.id}`}
                 className={({ isActive, isPending }) =>
-                  isPending ? "" : isActive ? "text-white underline underline-offset-8 decoration-[#0ef]" : ""
+                  isPending ? "" : isActive ? "text-white underline underline-offset-8" : ""
                 }
                 onClick={() => {
                   link.title == "Services"
@@ -99,9 +99,9 @@ const Navbar = () => {
         </ul>
 
         {/* For Mobile Screens */}
-        <div className="sm:hidden flex flex-1 justify-end items-center z-23 inset-0">
+        <div className="flex lg:hidden flex-1 justify-end items-center z-23 inset-0">
           <img
-            src={toggle ? close : menu}
+            src={toggle? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => {
@@ -129,16 +129,17 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <Link onClick={() => navigate(`/${link.id}`)}>
+                  {/* <Link onClick={() => navigate(`/${link.id}`)}> */}
+                  <NavLink to={`/${link.id}`}>
                     {link.title}
-                  </Link>
+                  </NavLink>
                   {link.title == "Services" && active
                     ? services.map((service) => (
                         <ul
                           key={service.id}
                           className={`${
                             active === link.title
-                              ? "text-[#0ef]"
+                              ? "text-[#0ef] font-bold"
                               : "text-white hidden"
                           } font-poppins font-medium cursor-pointer pl-[10px] py-[5px] text-black ${submenu}`}
                           onClick={() => {
@@ -151,6 +152,9 @@ const Navbar = () => {
                           <NavLink
                             to={`/${service.id}`}
                             onClick={() => setToggle(!toggle)}
+                            className={({ isActive, isPending }) =>
+                  isPending ? "" : isActive ? "text-[#0ef] font-bold" : ""
+                }
                           >
                             {service.title}
                           </NavLink>

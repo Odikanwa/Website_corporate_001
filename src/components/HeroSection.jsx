@@ -14,15 +14,15 @@ const HeroSection = () => {
         <Dropdown/>
         </div> */}
         <div
-        className={`m-0 absolute top-[20%] lg:top-[28%] left-[6%] text-center max-w-7xl flex items-start z-10`}
+        className={`m-0 absolute top-[20%] lg:top-[28%] left-[2%] text-center max-w-full lg:max-w-7xl flex items-start z-10`}
       >
 
         {/* <div className='bg-[rgba(17,14,51,0.5)] w-[40vw] px-5 py-5 rounded-lg text-white'> */}
-        <div className='flex flex-col justify-center content-center w-[40vw] px-5 py-5 rounded-lg text-white'>
-          <h1 className="font-poppins font-bold text-[white] lg:text-[40px] sm:text-[35px] xs:text-[30px] text-[40px] lg:leading-[40px] text-left mt-2 animate-slideRight-animation delay-500 contrast-100 -z-10">
+        <div className='flex flex-col justify-center content-center w-[80vw] lg:w-[40vw] px-5 py-5 rounded-lg text-white'>
+          <h1 className="font-poppins font-bold text-[white] text-[30px] lg:text-[40px] lg:leading-[40px] text-left mt-2 contrast-100 -z-10">
           Your One-stop <span className='text-[#0ef]'>IT Hub.</span>
           </h1>
-          <h5 className="font-poppins text-[white] text-[16px] lg:leading-[20px] lg:mt-6 text-left mt-2 animate-slideRight-animation delay-500 z-11 hidden lg:block">
+          <h5 className="font-poppins w-[50vw] lg:w-[40vw] text-[white] text-[16px] lg:leading-[20px]  lg:mt-6 text-left mt-[2vh] animate-slideRight-animation delay-500 z-11">
           In a world where bits and bytes shape business successes, we stand as your unwavering partner. Our mission is to empower you to achieve more, dream bigger, and seamlessly navigate the ever-evolving landscape of technology. 
           </h5>
           <Link to="/contact" onClick={() => GoToTop()}><RoundedButton>Contact us</RoundedButton></Link>
