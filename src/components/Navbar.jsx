@@ -19,10 +19,8 @@ const Navbar = () => {
   let navLinkRef = useRef();
 
   useEffect(() => {
-    
-    
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousedown", handleDropdown)
+    window.addEventListener("mousedown", handleDropdown);
     return () => {
       window.addEventListener("scroll", handleScroll);
       window.removeEventListener("mousedown", handleDropdown);
@@ -30,10 +28,10 @@ const Navbar = () => {
   });
 
   const handleDropdown = (e) => {
-    if(!navLinkRef.current.contains(e.target)){
-      setDropdownOpen(false)
+    if (!navLinkRef.current.contains(e.target)) {
+      setDropdownOpen(false);
     }
-  }
+  };
 
   const handleScroll = () => {
     if (window.scrollY) {
@@ -77,15 +75,22 @@ const Navbar = () => {
               onClick={() => setActive(link.title)}
             >
               <NavLink
-              ref={navLinkRef}
+                ref={navLinkRef}
                 to={`/${link.id}`}
+                className={({ isActive, isPending }) =>
+                  isPending ? "" : isActive ? "text-white underline underline-offset-8 decoration-[#0ef]" : ""
+                }
                 onClick={() => {
                   link.title == "Services"
                     ? setDropdownOpen(!dropdownOpen)
                     : setDropdownOpen(false);
-                    GoToTop();
+                  GoToTop();
                 }}
-                onMouseOver={() => { link.title == "Services" ? setDropdownOpen(!dropdownOpen) : setDropdownOpen(false)}}
+                onMouseOver={() => {
+                  link.title == "Services"
+                    ? setDropdownOpen(!dropdownOpen)
+                    : setDropdownOpen(false);
+                }}
               >
                 {link.title}
               </NavLink>
