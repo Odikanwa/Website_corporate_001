@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
@@ -8,7 +8,7 @@ import { DropdownContext } from "../stateMgt/context";
 import GoToTop from "./GoToTop";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const { dropdownOpen, setDropdownOpen } = useContext(DropdownContext);
   const [submenu, setSubmenu] = useState("");
@@ -56,7 +56,7 @@ const Navbar = () => {
           }}
         >
           <img
-            src={logo}
+            src={logo} 
             alt="logo"
             width={125}
             height={95}
@@ -78,7 +78,11 @@ const Navbar = () => {
                 ref={navLinkRef}
                 to={`/${link.id}`}
                 className={({ isActive, isPending }) =>
-                  isPending ? "" : isActive ? "text-white underline underline-offset-8" : ""
+                  isPending
+                    ? ""
+                    : isActive
+                    ? "text-white underline underline-offset-8"
+                    : ""
                 }
                 onClick={() => {
                   link.title == "Services"
@@ -101,12 +105,15 @@ const Navbar = () => {
         {/* For Mobile Screens */}
         <div className="flex lg:hidden flex-1 justify-end items-center z-23 inset-0">
           <img
-            src={toggle? close : menu}
+            // src={toggle ? close : menu}
+            srcSet=""
+            src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-[28px] h-[28px] object-contain cursor-pointer bg-blue"
             onClick={() => {
               setSubmenu("");
               setToggle(!toggle);
+              console.log(toggle);
             }}
           />
 
@@ -130,9 +137,7 @@ const Navbar = () => {
                   }}
                 >
                   {/* <Link onClick={() => navigate(`/${link.id}`)}> */}
-                  <NavLink to={`/${link.id}`}>
-                    {link.title}
-                  </NavLink>
+                  <NavLink to={`/${link.id}`}>{link.title}</NavLink>
                   {link.title == "Services" && active
                     ? services.map((service) => (
                         <ul
@@ -153,8 +158,12 @@ const Navbar = () => {
                             to={`/${service.id}`}
                             onClick={() => setToggle(!toggle)}
                             className={({ isActive, isPending }) =>
-                  isPending ? "" : isActive ? "text-[#0ef] font-bold" : ""
-                }
+                              isPending
+                                ? ""
+                                : isActive
+                                ? "text-[#0ef] font-bold"
+                                : ""
+                            }
                           >
                             {service.title}
                           </NavLink>
