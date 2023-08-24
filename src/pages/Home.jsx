@@ -9,6 +9,7 @@ import Networking from '../components/Networking'
 import Surveillance from '../components/Surveillance'
 import Hardware from '../components/Hardware'
 import GoToTop from '../components/GoToTop'
+import Services from '../components/Services'
 // import Footer from '../components/Footer'
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
     {/* <About/> */}
     <Partners/>
     <About/>
+    <Services/>
     <Microsoft/>
     <Domains/>
     <Websites/>

@@ -10,7 +10,8 @@ const Footer = () => {
         <div className="h-auto w-[100%] flex flex-row flex-wrap pt-[5%]">
             <div className="flex flex-col w-[50%] lg:w-[33%]">
                 <img src={logo} alt="logo" color="red" width={125} height={95} className=" object-contain mt-0 pt-0" />
-                <h1 className="pt-[10px] pb-[20px] font-bold">Oreegi Technologies Limited</h1>
+                <h1 className="pt-[10px] font-bold">Oreegi Technologies Limited</h1>
+                <h1 className="pt-[3px] pb-[20px] text-xs">8 Adesa Coker Street, Ikeja, Lagos</h1>
                 <Link to="/about"><h3 className="py-[5px] cursor-pointer">About us</h3></Link>
                 <Link to="/about"><h3 className="py-[5px]">Why us</h3></Link>
             </div>
