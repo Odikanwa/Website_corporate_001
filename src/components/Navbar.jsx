@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
@@ -8,7 +8,7 @@ import { DropdownContext } from "../stateMgt/context";
 import GoToTop from "./GoToTop";
 
 const Navbar = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { dropdownOpen, setDropdownOpen } = useContext(DropdownContext);
   const [submenu, setSubmenu] = useState("");
@@ -17,21 +17,22 @@ const Navbar = () => {
   const [navOpacity, setNavOpacity] = useState("bg-opacity-0");
 
   let navLinkRef = useRef();
+  let mobileNavLinkRef = useRef();
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousedown", handleDropdown);
+    window.addEventListener("touchend", handleMobileMenuDropdown)
     return () => {
       window.addEventListener("scroll", handleScroll);
-      window.removeEventListener("mousedown", handleDropdown);
+      window.removeEventListener("touchend", handleMobileMenuDropdown)
     };
   });
 
-  const handleDropdown = (e) => {
-    if (!navLinkRef.current.contains(e.target)) {
-      setDropdownOpen(false);
+  const handleMobileMenuDropdown = (e) => {
+    if (!mobileNavLinkRef.current.contains(e.target)){
+      setToggle(false);
     }
-  };
+  }
 
   const handleScroll = () => {
     if (window.scrollY) {
@@ -44,6 +45,7 @@ const Navbar = () => {
 
   return (
     <nav
+    ref={navLinkRef}
       className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20 bg-[#2257bf] ${navOpacity}`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -56,14 +58,14 @@ const Navbar = () => {
           }}
         >
           <img
-            src={logo} 
+            src={logo}
             alt="logo"
             width={125}
             height={95}
             className=" object-contain mt-0 pt-0"
           />
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul ref={navLinkRef} className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -72,17 +74,13 @@ const Navbar = () => {
                   ? "text-[#0ef] underline underline-offset-8"
                   : "text-white"
               } text-[14px] font-medium cursor-pointer hover:text-[#0ef] hover:underline hover:underline-offset-8`}
-              onClick={() => setActive(link.title)}
+              onClick={() => {setActive(link.title)}}
             >
               <NavLink
                 ref={navLinkRef}
                 to={`/${link.id}`}
                 className={({ isActive, isPending }) =>
-                  isPending
-                    ? ""
-                    : isActive
-                    ? "text-white underline underline-offset-8"
-                    : ""
+                  isPending ? "" : isActive ? "text-white underline underline-offset-8" : ""
                 }
                 onClick={() => {
                   link.title == "Services"
@@ -103,17 +101,15 @@ const Navbar = () => {
         </ul>
 
         {/* For Mobile Screens */}
-        <div className="flex lg:hidden flex-1 justify-end items-center z-23 inset-0">
+        <div ref={mobileNavLinkRef} className="flex lg:hidden flex-1 justify-end items-center z-23 inset-0">
           <img
-            // src={toggle ? close : menu}
-            srcSet=""
-            src={toggle ? close : menu}
+            // src={toggle? close : menu}
+            src={menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer bg-blue"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => {
               setSubmenu("");
               setToggle(!toggle);
-              console.log(toggle);
             }}
           />
 
@@ -137,7 +133,9 @@ const Navbar = () => {
                   }}
                 >
                   {/* <Link onClick={() => navigate(`/${link.id}`)}> */}
-                  <NavLink to={`/${link.id}`}>{link.title}</NavLink>
+                  <NavLink to={`/${link.id}`}>
+                    {link.title}
+                  </NavLink>
                   {link.title == "Services" && active
                     ? services.map((service) => (
                         <ul
@@ -158,12 +156,8 @@ const Navbar = () => {
                             to={`/${service.id}`}
                             onClick={() => setToggle(!toggle)}
                             className={({ isActive, isPending }) =>
-                              isPending
-                                ? ""
-                                : isActive
-                                ? "text-[#0ef] font-bold"
-                                : ""
-                            }
+                  isPending ? "" : isActive ? "text-[#0ef] font-bold" : ""
+                }
                           >
                             {service.title}
                           </NavLink>
