@@ -34,6 +34,20 @@ import surveillance_photo from "./surveillance.jpg";
 import hardware_photo from "./hardware.png";
 import website_photo from "./website.jpg";
 import m365 from "./microsoft_apps/m365.png";
+import business_central from "./dynamics_apps/business_central.svg";
+import commerce from "./dynamics_apps/commerce.svg";
+import customer_insights from "./dynamics_apps/customer_insights.svg";
+import customer_service from "./dynamics_apps/customer_service.svg";
+import customer_voice from "./dynamics_apps/customer_voice.svg";
+import field_service from "./dynamics_apps/field_service.svg";
+import finance from "./dynamics_apps/finance.svg";
+import fraud_protection from "./dynamics_apps/fraud_protection.svg";
+import hr from "./dynamics_apps/hr.svg";
+import intelligent_order_mgt from "./dynamics_apps/intelligent_order_mgt.svg";
+import marketing from "./dynamics_apps/marketing.svg";
+import project_operations from "./dynamics_apps/project_operations.svg";
+import sales from "./dynamics_apps/sales.svg";
+import supply_chain_mgt from "./dynamics_apps/supply_chain_mgt.svg";
 
 export {
   logo,
@@ -72,4 +86,18 @@ export {
   hardware_photo,
   website_photo,
   m365,
+  business_central,
+  commerce,
+  customer_insights,
+  customer_service,
+  customer_voice,
+  field_service,
+  finance,
+  fraud_protection,
+  hr,
+  intelligent_order_mgt,
+  marketing,
+  project_operations,
+  sales,
+  supply_chain_mgt
 };

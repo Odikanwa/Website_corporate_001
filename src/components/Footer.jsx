@@ -6,16 +6,16 @@ import { styles } from "../styles";
 
 const Footer = () => {
   return (
-    <div className="h-auto lg:h-[65vh] w-[100vw] flex flex-col content-center justify-center place-items-center text-white bg-[#2257bf] px-[10vw] py-[3vh] text-[14px]">
+    <div className="h-auto lg:h-[55vh] w-[100vw] flex flex-col content-center justify-center place-items-center text-white bg-[#2257bf] px-[10vw] py-[3vh] text-[14px]">
         <div className="h-auto w-[100%] flex flex-row flex-wrap pt-[5%]">
             <div className="flex flex-col w-[50%] lg:w-[33%]">
                 <img src={logo} alt="logo" color="red" width={125} height={95} className=" object-contain mt-0 pt-0" />
                 <h1 className="pt-[10px] font-bold">Oreegi Technologies Limited</h1>
                 <h1 className="pt-[3px] pb-[20px] text-xs">8 Adesa Coker Street, Ikeja, Lagos</h1>
-                <Link to="/about"><h3 className="py-[5px] cursor-pointer">About us</h3></Link>
-                <Link to="/about"><h3 className="py-[5px]">Why us</h3></Link>
+                <Link to="/about"><h3 className="py-[5px] cursor-pointer text-xs">About us</h3></Link>
+                <Link to="/about"><h3 className="py-[5px] text-xs">Why us</h3></Link>
             </div>
-            <div className="w-[50%] lg:w-[33%] flex flex-col">
+            <div className="w-[50%] lg:w-[33%] flex flex-col text-xs">
                 <h1 className="font-bold text-lg py-[10px]">Services</h1>
                 <Link to="/microsoft365" className="py-[5px] cursor-pointer">Microsoft 365</Link>
                 <Link to="/domainhosting" className="py-[5px] cursor-pointer">Domain Hosting</Link>

@@ -48,7 +48,7 @@ export default function App() {
     efficiency, innovation, and growth. Amidst this technological revolution,
     Oreegi emerges as a powerful solution to cater to diverse technological
     needs under a unified roof." />
-    <meta name="keywords" content="Oreegi Technologies, Microsoft 365, Office Networks, Domain Hosting, Website Templates, Hosting, Custom Websites, Surveillance Sytems" />
+    <meta name="keywords" content="Oreegi, Origin, Oreegi technology, Oreegi Technologies, Microsoft 365, Office Networks, Domain Hosting, Website Templates, Hosting, Custom Websites, Surveillance Sytems" />
     <meta name="author" content="Oreegi Technologies" />
     <meta property="og:title" content="Oreegi Technologies" />
     <meta

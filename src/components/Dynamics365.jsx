@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { microsoft_365 } from "../constants";
 import { RoundedButton } from "./RoundedButton";
 import GoToTop from "./GoToTop";
+import DynamicsCard from "./DynamicsCard";
 
-const Microsoft = () => {
+const Dynamics365 = () => {
   return (
-    <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white text-[14px] px-[10vw] py-[3vh]">
+    <div className="w-[100vw] h-auto lg:h-auto bg-[#F8F8FF] text-black px-[10vw] py-[3vh] text-[14px]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[5%] lg:py-[3%]">
-        Microsoft 365
+        Dynamics 365
       </h1>
       <div className="lg:pr-[35%] pb-[4%] lg:pb-0">
         <p>
@@ -20,26 +21,9 @@ const Microsoft = () => {
           workflows, and secure data management.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row flex-wrap content-between w-[100%] mt-[3vh]">
-        {microsoft_365.map((items) => (
-          <div key={items.id} className="basis-1/3 px-7 mb-[2vh]">
-            <h1 className="mb-[5px] text-xs">{items.name}</h1>
-            <div>
-              {items.apps.map((subItems) => (
-                <>
-                  <img
-                    key={subItems.id}
-                    src={subItems.icon}
-                    alt="Microsoft Word Image"
-                    className="w-[50px] h-[50px] inline pr-[13px] object-contain"
-                  />
-                  {/* <p className="text-sm">{subItems.title}</p> */}
-                </>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+      <div className="h-auto w-[100vw]"><DynamicsCard/></div>
+      
+      
       <Link to="/microsoft365" onClick={() => GoToTop()}>
         <RoundedButton>Learn more</RoundedButton>
       </Link>
@@ -47,4 +31,4 @@ const Microsoft = () => {
   );
 };
 
-export default Microsoft;
+export default Dynamics365;

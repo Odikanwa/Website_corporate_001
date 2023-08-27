@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
@@ -8,7 +8,7 @@ import { DropdownContext } from "../stateMgt/context";
 import GoToTop from "./GoToTop";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const { dropdownOpen, setDropdownOpen } = useContext(DropdownContext);
   const [submenu, setSubmenu] = useState("");

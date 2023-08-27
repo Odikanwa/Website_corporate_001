@@ -10,6 +10,7 @@ import Surveillance from '../components/Surveillance'
 import Hardware from '../components/Hardware'
 import GoToTop from '../components/GoToTop'
 import Services from '../components/Services'
+import Dynamics365 from '../components/Dynamics365'
 // import Footer from '../components/Footer'
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
     <About/>
     <Services/>
     <Microsoft/>
+    <Dynamics365/>
     <Domains/>
     <Websites/>
     <Networking/>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { surveillance_photo } from "../assets";
-import RoundedButton from "./RoundedButton";
+import { RoundedButton } from "./RoundedButton";
 import GoToTop from "./GoToTop";
 
 const Surveillance = () => {

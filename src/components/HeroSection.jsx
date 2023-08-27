@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { hero } from "../assets";
-import RoundedButton from "./RoundedButton";
+import { RoundedButton } from "./RoundedButton";
 // import Dropdown from "./Dropdown";
 import GoToTop from "./GoToTop";
 
