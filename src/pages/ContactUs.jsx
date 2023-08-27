@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import RoundedButton from "../components/RoundedButton";
+import {RoundedButton} from "../components/RoundedButton";
 import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
 import { BiSupport } from 'react-icons/bi';
 import { AiFillWechat } from 'react-icons/ai';
@@ -62,4 +62,4 @@ const ContactUs = () => {
   )
 }
 
-export default ContactUs
+export default ContactUs;

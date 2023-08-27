@@ -10,7 +10,7 @@ export const RoundedButton = ({children, value}) => {
 
 export const SmallRoundedButton = ({children}) => {
   return (
-    <div className='bg-white text-[#000] text-xs w-[37vw] lg:w-[100px] py-[7px] px-[10px] rounded-[100px] mt-11 cursor-pointer border-[1px] hover:bg-[#0ef] hover:shadow-[#0ef] shadow-md place-content-center place-items-center justify-center text-center'>
+    <div className='bg-white  text-[#000] text-xs w-[37vw] lg:w-[100px] py-[7px] px-[10px] rounded-[100px] mt-11 cursor-pointer border-[1px] hover:bg-[#0ef] hover:shadow-[#0ef] shadow-md place-content-center place-items-center justify-center text-center'>
         {children}
     </div>
   )

@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { microsoft_365 } from "../constants";
 import { RoundedButton } from "./RoundedButton";
 import GoToTop from "./GoToTop";
-import DynamicsCard from "./DynamicsCard";
+import DynamicsCards from "./DynamicsCard";
 
 const Dynamics365 = () => {
   return (
@@ -12,18 +11,20 @@ const Dynamics365 = () => {
       </h1>
       <div className="lg:pr-[35%] pb-[4%] lg:pb-0">
         <p>
-          Microsoft 365, a comprehensive suite of productivity tools and
-          cloud-based services developed by Microsoft Corporation. It is designed
-          to empower individuals, teams, and businesses to achieve their goals
-          with enhanced efficiency and collaboration. Launched in April 2020,
-          Microsoft 365 represents a transformative shift in how organizations
-          approach their work, enabling seamless communication, streamlined
-          workflows, and secure data management.
+          Microsoft Dynamics 365 is a broad suite of integrated business
+          applications that combines customer relationship management (CRM) and
+          enterprise resource planning (ERP) functionalities. It empowers
+          organizations to streamline processes, enhance customer engagement,
+          and make data-driven decisions across sales, marketing, customer
+          service, finance, and other key business areas. Built on the Microsoft
+          Cloud, Dynamics 365 offers scalability, customization, and advanced
+          analytics for improving overall operational efficiency.
         </p>
       </div>
-      <div className="h-auto w-[100vw]"><DynamicsCard/></div>
-      
-      
+      <div className="h-auto w-[100vw] mr-[10vw]">
+        <DynamicsCards />
+      </div>
+
       <Link to="/microsoft365" onClick={() => GoToTop()}>
         <RoundedButton>Learn more</RoundedButton>
       </Link>
