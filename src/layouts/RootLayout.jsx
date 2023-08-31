@@ -4,13 +4,16 @@ import { Outlet } from "react-router-dom";
 import { DropdownContext } from "../stateMgt/context";
 import { useState } from "react";
 import Dropdown from "../components/Dropdown";
+// import { ContextProvider } from "../stateMgt/context";
 
 const RootLayout = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="overflow-x-hidden overflow-y-hidden">
-      <DropdownContext.Provider value={{ dropdownOpen, setDropdownOpen }}>
+      <DropdownContext.Provider value={{ dropdownOpen, setDropdownOpen, modalOpen, setModalOpen }}>
+      {/* <ContextProvider> */}
         <header>
           <Navbar />
         </header>
@@ -26,9 +29,14 @@ const RootLayout = () => {
         <footer>
           <Footer />
         </footer>
+        {/* </ContextProvider> */}
       </DropdownContext.Provider>
     </div>
   );
 };
 
 export default RootLayout;
+
+{/* <ThemeProvider>
+  <FunctionContextComponent/>
+</ThemeProvider> */}

@@ -27,6 +27,7 @@ function Home() {
     <Services/>
     <Microsoft/>
     <Dynamics365/>
+    {/* <Modal/> */}
     <Domains/>
     <Websites/>
     <Networking/>

@@ -4,6 +4,8 @@ import GoToTop from "./GoToTop";
 import DynamicsCards from "./DynamicsCard";
 
 const Dynamics365 = () => {
+
+
   return (
     <div className="w-[100vw] h-auto lg:h-auto bg-[#F8F8FF] text-black px-[10vw] py-[3vh] text-[14px]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[5%] lg:py-[3%]">
@@ -25,9 +27,11 @@ const Dynamics365 = () => {
         <DynamicsCards />
       </div>
 
-      <Link to="/microsoft365" onClick={() => GoToTop()}>
+      <Link  onClick={() => GoToTop()}>
         <RoundedButton>Learn more</RoundedButton>
       </Link>
+
+      {/* <div><Modal/></div> */}
     </div>
   );
 };

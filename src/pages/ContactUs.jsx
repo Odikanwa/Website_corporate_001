@@ -24,9 +24,9 @@ const ContactUs = () => {
           <BsFillTelephoneOutboundFill className="justify-center place-content-center align-middle p-[8px] text-[45px] text-orange-500 border-[2px] border-orange-500 rounded-[200px]"/>
           </div>
           <div className="text-black justify-center place-content-center align-middle text-center">
-          <h1 className="text-center">Talk to Sales</h1>
-          <h1 className="font-bold text-[20px]">+234 800 000 0000</h1>
-          <h1 className="font-bold">+234 800 00 0000</h1>
+          <h1 className="text-center">For General Enquiries</h1>
+          {/* <h1 className="font-bold text-[20px]">Reach us at</h1> */}
+          <h1 className="font-bold">operations@oreegi.com</h1>
           </div>
         </div>
 
@@ -35,9 +35,9 @@ const ContactUs = () => {
           <BiSupport className="justify-center place-content-center align-middle p-[8px] text-[45px] text-orange-500 border-[2px] border-orange-500 rounded-[200px]"/>
           </div>
           <div className="text-black justify-center place-content-center align-middle text-center">
-          <h1 className="text-center">Talk to Support</h1>
-          <h1 className="font-bold text-[20px]">+234 800 000 0000</h1>
-          <h1 className="font-bold">+234 800 00 0000</h1>
+          <h1 className="text-center">Have a complaint?</h1>
+          {/* <h1 className="font-bold text-[20px]">+234 800 000 0000</h1> */}
+          <h1 className="font-bold">support@oreegi.com</h1>
           </div>
         </div>
 

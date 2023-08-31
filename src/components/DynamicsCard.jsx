@@ -5,6 +5,9 @@ import { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+// import { useContext } from "react";
+// import { DropdownContext } from "../stateMgt/context";
+// import { useModalContext } from "../stateMgt/context";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -28,7 +31,11 @@ function SampleNextArrow(props) {
     );
   }
 
+  // const { modalOpen, setModalOpen} = useContext(DropdownContext);
+
 export default  class DynamicsCards extends Component {
+  //  modal = useModalContext()
+
     render() {
       const settings = {
         className: "center",
@@ -76,6 +83,8 @@ export default  class DynamicsCards extends Component {
               }
           ]
       };
+
+      
       return (
         <div className="w-[100vw] mt-[5vh]">
           <h2 className="font-bold"> See Available Offerings &gt; &gt; </h2>
@@ -91,7 +100,7 @@ export default  class DynamicsCards extends Component {
                   />
                   <h1 className="font-bold pb-[3vh]">{module.title}</h1>
                   <p className="pb-[3vh]">{module.short_desc}</p>
-                  <p className="font-bold cursor-pointer">Learn More &gt; &gt;</p>
+                  <p className="font-bold cursor-pointer" onClick={() => setModalOpen(true)}>Learn More &gt; &gt;</p>
                   {/* <div className="w-[100%] ml-[30%] absolute bottom-0 mb-[3vh]"><SmallRoundedButton>Learn More</SmallRoundedButton></div> */}
                   
                 </div>
