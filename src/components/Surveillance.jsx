@@ -5,7 +5,7 @@ import GoToTop from "./GoToTop";
 
 const Surveillance = () => {
   return (
-    <div className="h-auto w-[100vw] bg-[#2257bf] text-white px-[10vw] pb-[10vh] text-[14px] py-[3vh]">
+    <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh] text-[14px] py-[3vh]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[10%] lg:py-[3%]">
         Surveillance Systems
       </h1>

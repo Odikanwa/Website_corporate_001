@@ -71,6 +71,10 @@ const services = [
     title: "Microsoft 365",
   },
   {
+    id: "dynamics365",
+    title: "Dynamics 365",
+  },
+  {
     id: "domainhosting",
     title: "Domain Name & Hosting",
   },
@@ -85,6 +89,10 @@ const services = [
   {
     id: "surveillance",
     title: "Surveillance Systems",
+  },
+  {
+    id: "managedwifi",
+    title: "Managed Wifi",
   },
   // {
   //   id: "marketplace",

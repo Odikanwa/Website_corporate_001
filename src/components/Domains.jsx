@@ -5,12 +5,12 @@ import GoToTop from "./GoToTop";
 
 const Domains = () => {
   return (
-    <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh] text-[14px] py-[3vh]">
+    <div className="h-auto w-[100vw] bg-[#2257bf] text-white px-[10vw] pb-[10vh] text-[14px] py-[3vh]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[5%] lg:py-[3%]">
         Domain Name & Hosting
       </h1>
-      <div className="flex flex-col-reverse lg:flex-row content-between justify-center bg-[#F8F8FF] text-black">
-        <div className="w-[100%] lg:w-[50%] lg:pr-[12%]">
+      <div className="flex flex-col-reverse lg:flex-row content-between justify-center text-white">
+        <div className="w-[100%] lg:w-[55%] lg:pr-[12%]">
           <p className="mb-[2vh]">
             Welcome to the world of seamless digital presence and reliable
             online infrastructure. We are a leading provider of domain name and
@@ -20,17 +20,12 @@ const Domains = () => {
             of services ensures that your digital journey is smooth, secure, and
             optimized for success.
           </p>
-          <p>
-            We are committed to offering user-friendly, innovative, and
-            value-driven solutions to help our clients thrive in the digital
-            age.
-          </p>
 
           <Link to="/domainhosting" onClick={() => GoToTop()}>
             <RoundedButton>Learn more</RoundedButton>
           </Link>
         </div>
-        <div className="w-[100%] lg:w-[50%] lg:pr-[10%] py-[10%] lg:py-0 flex text-center justify-center place-items-start">
+        <div className="w-[100%] lg:w-[45%] lg:pr-[5%] lg:ml-[5%] py-[10%] lg:py-0 flex text-center justify-center place-items-start">
           <img
             src={domains_photo}
             alt="domains photo"

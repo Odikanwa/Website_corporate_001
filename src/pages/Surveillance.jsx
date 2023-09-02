@@ -80,7 +80,7 @@ const Surveillance = () => {
       </div>
 
       <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] py-[5vh]">
-        <h1 className="font-bold text-[20px] py-[2vh]">OUR SERVICES</h1>
+        <h1 className="font-bold text-[20px] py-[2vh]">WHY CHOOSE US</h1>
         <div className="w-[100%] lg:w-[60%] pb-[3vh]">
           <p className="pb-[2vh]">
             <em className="font-bold">Expertise: </em> Our team comprises

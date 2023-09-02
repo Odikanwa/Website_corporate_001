@@ -8,7 +8,7 @@ const Dynamics365 = () => {
 
 
   return (
-    <div className="w-[100vw] h-auto lg:h-auto bg-[#F8F8FF] text-black px-[10vw] py-[3vh] text-[14px]">
+    <div className="w-[100vw] h-auto lg:h-auto bg-[#F8F8FF] text-black px-[10vw] py-[3vh] text-[14px] pb-[8vh]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[5%] lg:py-[3%]">
         Dynamics 365
       </h1>
@@ -28,7 +28,7 @@ const Dynamics365 = () => {
         <DynamicsCards />
       </div>
 
-      <NavLink  onClick={() => GoToTop()}>
+      <NavLink to="dynamics365"  onClick={() => GoToTop()}>
         <RoundedButton>Learn more</RoundedButton>
       </NavLink>
 

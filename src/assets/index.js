@@ -48,6 +48,9 @@ import marketing from "./dynamics_apps/marketing.svg";
 import project_operations from "./dynamics_apps/project_operations.svg";
 import sales from "./dynamics_apps/sales.svg";
 import supply_chain_mgt from "./dynamics_apps/supply_chain_mgt.svg";
+import dynamics from "./dynamics2.png";
+import wifi from "./wifi3.jpg";
+import wifi2 from "./wifi4.png";
 
 export {
   logo,
@@ -99,5 +102,8 @@ export {
   marketing,
   project_operations,
   sales,
-  supply_chain_mgt
+  supply_chain_mgt,
+  dynamics,
+  wifi,
+  wifi2,
 };

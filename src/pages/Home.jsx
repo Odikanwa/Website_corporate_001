@@ -11,6 +11,7 @@ import Hardware from '../components/Hardware'
 import GoToTop from '../components/GoToTop'
 import Services from '../components/Services'
 import Dynamics365 from '../components/Dynamics365'
+import ManagedWifi from '../components/ManagedWifi'
 // import Footer from '../components/Footer'
 
 function Home() {
@@ -21,20 +22,18 @@ function Home() {
       <Navbar/>
     <HeroSection/>
     </div>
-    {/* <About/> */}
     <Partners/>
     <About/>
     <Services/>
     <Microsoft/>
     <Dynamics365/>
-    {/* <Modal/> */}
     <Domains/>
     <Websites/>
     <Networking/>
     <Surveillance/>
+    <ManagedWifi/>
     <Hardware/>
     <GoToTop/>
-    {/* <Footer/> */}
     </div>
   )
 }

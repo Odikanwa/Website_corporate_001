@@ -18,6 +18,7 @@ import WebsiteDev from "./pages/WebsiteDev";
 import Lan from "./pages/Lan";
 import { Helmet } from "react-helmet";
 import Services from "./pages/Services";
+import ManagedWifiPage from "./pages/ManagedWifi";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route path="domainhosting" element={<DomainHosting />} />
       <Route path="websitedev" element={<WebsiteDev />} />
       <Route path="lan" element={<Lan />} />
+      <Route path="managedwifi" element={<ManagedWifiPage />} />
       <Route path="services" element={<Services />} />
       <Route path="surveillance" element={<Surveillance />} />
     </Route>

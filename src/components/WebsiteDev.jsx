@@ -5,7 +5,7 @@ import GoToTop from "./GoToTop";
 
 const WebsiteDev = () => {
   return (
-    <div className="h-auto w-[100vw] bg-[#2257bf] text-white px-[10vw] pb-[10vh] text-[14px] py-[3vh]">
+    <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh] text-[14px] py-[3vh]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[10%] lg:py-[3%]">
         Custom Websites & Templates
       </h1>
@@ -16,7 +16,7 @@ const WebsiteDev = () => {
             alt="network photo"
             height={450}
             width={550}
-            className="object-contain rounded-[200px]"
+            className="object-contain rounded-[200px] border-[2px] shadow-md"
           />
         </div>
         <div className="w-[100%] lg:w-[50%] lg:pl-[8%]">
