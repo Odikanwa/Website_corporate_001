@@ -1,6 +1,6 @@
 import { BsFillClockFill, BsFillSignpostFill } from "react-icons/bs";
 import { FaRecycle } from "react-icons/fa";
-import { RoundedButton } from "./RoundedButton";
+import RoundedButton from "./RoundedButton";
 import { NavLink } from "react-router-dom";
 import GoToTop from "./GoToTop";
 

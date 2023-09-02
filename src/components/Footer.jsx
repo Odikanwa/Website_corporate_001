@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             <div className="w-[50%] lg:w-[33%]">
             <Link to="/contactus" className="py-[5px] cursor-pointer"><h1 className="font-bold text-lg">Contact us</h1></Link>
-            <p className="py-[5px]">+234 000 000 0000</p>
+            <p className="py-[5px]">support@oreegi.com</p>
                 <h1 className="font-bold text-lg pt-[5%]">Enquiries</h1>
                 <p className="py-[5px]">operations@oreegi.com</p>
             </div>

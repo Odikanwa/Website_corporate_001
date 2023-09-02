@@ -1,16 +1,18 @@
-import { useState, useEffect, useContext, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks, services } from "../constants";
 import { logo, menu, close } from "../assets";
-import { DropdownContext } from "../stateMgt/context";
+// import { DropdownContext } from "../contexts/DropdownContext";
+import { useDropdownContext } from "../contexts/DropdownContext";
 import GoToTop from "./GoToTop";
 
 const Navbar = () => {
   // const navigate = useNavigate();
 
-  const { dropdownOpen, setDropdownOpen } = useContext(DropdownContext);
+  const { dropdownOpen, setDropdownOpen } = useDropdownContext()
+  
   const [submenu, setSubmenu] = useState("");
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -23,7 +25,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("touchend", handleMobileMenuDropdown)
     return () => {
-      window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("touchend", handleMobileMenuDropdown)
     };
   });

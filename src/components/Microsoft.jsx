@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { microsoft_365 } from "../constants";
-import { RoundedButton } from "./RoundedButton";
+import RoundedButton from "./RoundedButton";
 import GoToTop from "./GoToTop";
 
 const Microsoft = () => {

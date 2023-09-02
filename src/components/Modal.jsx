@@ -1,60 +1,42 @@
-// import * as React from 'react';
-import { useContext } from 'react';
-import { DropdownContext } from '../stateMgt/context';
-import Backdrop from '@mui/material/Backdrop';
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
-import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+/* eslint-disable react/prop-types */
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
+import { useEffect } from "react";
+import { useModalContext } from "../contexts/ModalContext";
+import ReactDOM from 'react-dom';
+import { createPortal } from "react-dom";
+
+const Modal = ({ children }) => {
+  const { modalOpen, setModalOpen } = useModalContext();
+
+  useEffect(() => {
+    if(modalOpen == true){
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  });
+  
+
+
+  if (!modalOpen) return null;
+
+  return ReactDOM.createPortal(
+    <div
+      className="h-auto w-auto  fixed inset-0 bg-black opacity-75 backdrop-blur-md flex justify-center items-center z-1000"
+      onClick={() => setModalOpen(false)}
+    >
+      <div className="flex flex-col">
+        <button
+          className="text-white text-xl place-self-end"
+          onClick={() => setModalOpen(false)}
+        >
+          X
+        </button>
+        <div>{children}</div>
+      </div>
+    </div>,
+    document.getElementById("portal")
+  );
 };
 
-export default function TransitionsModal() {
-
-  const { modalOpen, setModalOpen} = useContext(DropdownContext);
-
-  // const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setModalOpen(true);
-  const handleClose = () => setModalOpen(false);
-
-  return (
-    <div>
-      <Button onClick={handleOpen}>Open modal</Button>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        open={modalOpen}
-        onClose={handleClose}
-        closeAfterTransition
-        slots={{ backdrop: Backdrop }}
-        slotProps={{
-          backdrop: {
-            timeout: 500,
-          },
-        }}
-      >
-        <Fade in={modalOpen}>
-          <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
-            </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
-          </Box>
-        </Fade>
-      </Modal>
-    </div>
-  );
-}
+export default Modal;

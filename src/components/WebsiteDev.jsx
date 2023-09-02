@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { website_photo } from "../assets";
-import { RoundedButton } from "./RoundedButton";
+import RoundedButton from "./RoundedButton";
 import GoToTop from "./GoToTop";
 
 const WebsiteDev = () => {

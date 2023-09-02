@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState, useRef } from "react"
 import { services } from "../constants"
-import { DropdownContext } from "../stateMgt/context"
+import { DropdownContext } from "../contexts/DropdownContext"
 import { NavLink } from "react-router-dom";
 import GoToTop from "./GoToTop";
 

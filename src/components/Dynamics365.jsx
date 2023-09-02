@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import { RoundedButton } from "./RoundedButton";
+import { NavLink } from "react-router-dom";
+import RoundedButton from "./RoundedButton";
 import GoToTop from "./GoToTop";
 import DynamicsCards from "./DynamicsCard";
+// import Modal from "./Modal";
 
 const Dynamics365 = () => {
 
@@ -27,11 +28,10 @@ const Dynamics365 = () => {
         <DynamicsCards />
       </div>
 
-      <Link  onClick={() => GoToTop()}>
+      <NavLink  onClick={() => GoToTop()}>
         <RoundedButton>Learn more</RoundedButton>
-      </Link>
+      </NavLink>
 
-      {/* <div><Modal/></div> */}
     </div>
   );
 };

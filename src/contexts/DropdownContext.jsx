@@ -1,7 +1,33 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useState } from "react";
 
 export const DropdownContext = createContext({});
-export const ModalContext = createContext({});
+
+const DropdownContextProvider = ({children}) => {
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    return (
+        <DropdownContext.Provider value={{dropdownOpen, setDropdownOpen}}>
+            {children}
+        </DropdownContext.Provider>
+    )
+}
+
+export const useDropdownContext = () => {
+    const context = useContext(DropdownContext);
+    if(!context) {
+        throw new Error("useDropdownContext can be used within a DropdownContextProvider")
+    }
+
+    return context;
+
+}
+
+export default DropdownContextProvider;
+
+
+
+
 
 // export const useDropdownContext = () => {
 //     return useContext(DropdownContext)
