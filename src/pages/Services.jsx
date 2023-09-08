@@ -8,11 +8,11 @@ import Hardware from "../components/Hardware";
 const Services = () => {
   return (
     <>
-    <Surveillance/>
-    <Networking/>
-    <Microsoft/>
     <Domains/>
     <WebsiteDev/>
+    <Networking/>
+    <Surveillance/>
+    <Microsoft/>
     <Hardware/>
     </>
   )

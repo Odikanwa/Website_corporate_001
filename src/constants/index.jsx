@@ -39,6 +39,13 @@ import {
   supply_chain_mgt,
 } from "../assets";
 
+import {
+  BsFillClockFill,
+  BsFillRocketTakeoffFill,
+  BsFillSignpostFill,
+} from "react-icons/bs";
+import { FaRecycle, FaHandshake } from "react-icons/fa";
+
 import { BsChevronDown } from "react-icons/bs";
 
 export const navLinks = [
@@ -349,6 +356,39 @@ const dynamics_module = [
   },
 ]
 
+const benefits_aboutus = [
+  {
+    id: 0,
+    icon: <BsFillClockFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]"/>,
+    title: "Time & Resource Efficiency",
+    desc: "Save valuable time and resources by accessing a diverse range oftechnology solutions without the need to search or negotiate with multiple vendors."
+  },
+  {
+    id: 1,
+    icon: <FaRecycle className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]"/>,
+    title: "Holistic Approach",
+    desc: "Achieve a comprehensive view of your technology landscape, fostering better decision-making, integration, and optimization."
+  },
+  {
+    id: 2,
+    icon: <BsFillSignpostFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]"/>,
+    title: "Expert Guidance",
+    desc: "Benefit from the expertise of professionals who can offer tailored recommendations, insights, and best practices across a spectrum of technology domains."
+  },
+  {
+    id: 3,
+    icon: <BsFillRocketTakeoffFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]"/>,
+    title: "Scalability & Adaptability",
+    desc: "As technology needs evolve, &quot;Oreegi&quot; can adapt and provide solutions that align with changing requirements."
+  },
+  {
+    id: 4,
+    icon: <FaHandshake className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]"/>,
+    title: "Collaborative Partnership",
+    desc: "Forge a collaborative partnership with technology experts who are invested in your success and growth."
+  }
+]
+
 // const projects = [
 //   {
 //     name: "Custom-Shirts",
@@ -434,6 +474,6 @@ const dynamics_module = [
 //   },
 // ];
 
-export { services, microsoft_365, dynamics_module };
+export { services, microsoft_365, dynamics_module, benefits_aboutus };
 
 // export { services, technologies, experiences, testimonials, projects };
