@@ -118,7 +118,7 @@ const DomainHosting = () => {
             </div>
           </div>
 
-          <div className="w-[100%] lg:w-[70px] flex flex-col place-self-end">
+          <div className="w-[100%] lg:w-[70%] flex flex-col place-self-end">
             <div className="w-[70px] h-[70px] flex bg-[#14adb8] mb-[3vh] text-white rounded-full justify-center place-content-center">
               <p className="text-center font-bold text-[30px] py-[15px]">3</p>
             </div>
