@@ -1,23 +1,65 @@
+import { NavLink } from "react-router-dom";
 import { network_photo } from "../assets";
+import { benefits_lan, benefits_lan_chooseUS } from "../constants";
+import RoundedButton from "../components/RoundedButton";
+
+const BenefitCard = () => {
+  return (
+    // <div className="h-auto w-[40vw] bg-red-500 flex gap-10 box-content text-[12px] rounded-2xl">
+    <div className="h-auto w-[100%] flex flex-col lg:flex-row flex-wrap gap-[5vh] lg:gap-[2vw] py-[10vh] mr-[5vw] place-self-center justify-center place-items-center items-center">
+      {benefits_lan.map((benefit) => (
+        <div
+          key={benefit.id}
+          className="w-[80vw] lg:w-[25%] flex flex-row text-left px-[4vw] lg:px-[2vw] py-[6vh] gap-3 justify-center place-content-center border-[2px] border-white bg-white box-content box-shadow2 drop-shadow-lg  shadow-xl rounded-[20px]"
+        >
+          <div className="text-cyan-500">{benefit.icon}</div>
+          <div className="flex flex-col">
+            <h1 className="font-medium text-[14px] py-[2vh]">
+              {benefit.title}
+            </h1>
+            <p className="text-[12px]">{benefit.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const BenefitCard_ChooseUs = () => {
+  return (
+    // <div className="h-auto w-[40vw] bg-red-500 flex gap-10 box-content text-[12px] rounded-2xl">
+    <div className="h-auto w-[100%] flex flex-col lg:flex-row flex-wrap gap-[5vh] lg:gap-[2vw] py-[10vh] mr-[5vw] place-self-center justify-center place-items-center items-center">
+      {benefits_lan_chooseUS.map((benefit) => (
+        <div
+          key={benefit.id}
+          className="w-[80vw] lg:w-[25%] flex flex-row text-left px-[4vw] lg:px-[2vw] py-[6vh] gap-3 justify-center place-content-center border-[2px] border-white bg-white box-content box-shadow2 drop-shadow-lg  shadow-xl rounded-[20px]"
+        >
+          <div className="text-cyan-500">{benefit.icon}</div>
+          <div className="flex flex-col">
+            <h1 className="font-medium text-[14px] py-[2vh]">
+              {benefit.title}
+            </h1>
+            <p className="text-[12px]">{benefit.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const Lan = () => {
   return (
-    <div className="h-auto lg:auto w-[100vw] bg-[#2257bf] text-white text-[14px]">
-      <div className="px-[10vw] pb-[10vh] pt-[10vh]">
+    <div className="h-auto lg:auto w-[100vw] bg-[#F8F8FF] text-white text-[14px]">
+      <div className="px-[10vw] pb-[10vh] bg-[#2257bf] pt-[10vh]">
         <h1 className="font-bold text-[25px] lg:text-[30px] py-[10%] lg:py-[5%]">
           Network Design & Implementation
         </h1>
         <div className="flex flex-col-reverse lg:flex-row content-between justify-center  bg-[#2257bf] text-white">
           <div className="w-[100%] lg:w-[50%] lg:pr-[12%]">
-            <p>
+            <p className="font-medium text-[20px]">
               Explore the realm of next-generation connectivity and network
               solutions with our specialized network design and implementation
-              services. Our platform is your gateway to unlocking the power of
-              seamless communication, robust infrastructure, and optimized
-              network performance. Whether you&apos;re a business seeking to
-              enhance operational efficiency or an organization striving for
-              digital transformation, our expertise empowers you to create,
-              implement, and manage networks that drive success.
+              services. 
             </p>
           </div>
 
@@ -33,69 +75,44 @@ const Lan = () => {
         </div>
       </div>
 
-      <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pt-[10vh]">
-        <h1 className="font-bold text-[20px] py-[2vh]">OUR SERVICES</h1>
-        <div className="w-[100%] lg:w-[60%] pb-[3vh]">
-          <p className="pb-[2vh]">
-            <em className="font-bold">Network Design: </em> Our team of
-            experienced network architects crafts comprehensive network designs
-            tailored to your specific needs. We analyze your requirements, plan
-            efficient architectures, and create blueprints that optimize
-            performance, scalability, and security.
-          </p>
+      <h1 className="font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black">
+        What&apos;s the Service About?
+      </h1>
 
-          <p className="pb-[2vh]">
-            <em className="font-bold">Network Implementation:</em> From
-            conception to realization, we transform network designs into
-            tangible, functional solutions. Our implementation process is
-            meticulous, ensuring seamless deployment of hardware, software, and
-            configurations to bring your network vision to life.
-          </p>
-
-          <p className="pb-[2vh]">
-            <em className="font-bold">Network Optimization:</em> Streamline and
-            enhance your existing network infrastructure with our optimization
-            services. We fine-tune configurations, analyze traffic patterns, and
-            identify bottlenecks to maximize efficiency and reliability..
-          </p>
-
-          <p className="pb-[2vh]">
-            <em className="font-bold">Wireless Solutions:</em> Wireless
-            Solutions: Create seamless wireless environments with our advanced
-            Wi-Fi and wireless networking solutions. From office spaces to large
-            campuses, our wireless designs ensure reliable coverage and
-            high-speed connectivity.
-          </p>
-        </div>
+      <div className="place-content-center place-items-center justify-center border-b-[3px] bg-[url('../src/assets/bg3.jpg')] border-x-slate-100 rounded-[30px] bg-white text-black mx-[3vw] lg:mx-[20vw] py-[5vh] border-white border-[2px] drop-shadow-md shadow-md">
+        <p className="px-[10vw] lg:px-[5vw] text-left border-l-[5px] border-l-cyan-500">
+          Network design and implementation is the cornerstone of modern
+          connectivity. It&apos;s the art and science of crafting robust, efficient,
+          and secure communication infrastructures. We create efficient, secure,
+          and scalable communication infrastructures for businesses and
+          organizations. This generally requires the meticulous planning,
+          configuration, and deployment of hardware, software, and protocols to
+          facilitate seamless data exchange. With a deep understanding of
+          networking principles, we work to optimize network performance,
+          ensuring high availability and minimal downtime.
+        </p>
       </div>
 
-      <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] py-[5vh]">
-        <h1 className="font-bold text-[20px] py-[2vh]">OUR SERVICES</h1>
-        <div className="w-[100%] lg:w-[60%] pb-[3vh]">
-          <p className="pb-[2vh]">
-            <em className="font-bold">Expertise: </em> Our team comprises skilled professionals with extensive experience in network design, communication, and cybersecurity.
-          </p>
+      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+        What We Offer You
+      </h1>
 
-          <p className="pb-[2vh]">
-            <em className="font-bold">Customization:</em> We understand that each organization has unique needs. Our solutions are tailored to align with your business goals and requirements.
-          </p>
+      <div className="h-auto w-[98vw] text-black bg-[url('../src/assets/bg3.jpg')] border-[3px] drop-shadow-xl shadow-lg border-white rounded-[100px] ml-[0.8vw]">
+        <BenefitCard />
+      </div>
 
-          <p className="pb-[2vh]">
-            <em className="font-bold">Reliability:</em> Our solutions are built for stability and high availability, ensuring uninterrupted communication and connectivity.
-          </p>
+      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+        Why Choose Us
+      </h1>
 
-          <p className="pb-[2vh]">
-            <em className="font-bold">Scalability:</em> Whether you are a small startup or a large enterprise, our solutions can scale to accommodate your growth and evolving needs.
-          </p>
+      <div className="h-auto w-[98vw] text-black bg-[url('../src/assets/bg3.jpg')] border-[3px] drop-shadow-xl shadow-lg border-white rounded-[100px] ml-[0.8vw]">
+        <BenefitCard_ChooseUs />
+      </div>
 
-          <p className="pb-[2vh]">
-            <em className="font-bold">Innovation:</em> Stay ahead of technological advancements with our commitment to innovation, ensuring your network remains future-proof.
-          </p>
-
-          <p className="pb-[2vh]">
-            <em className="font-bold">Client-Centric Approach:</em> We prioritize client satisfaction, aiming to build long-lasting partnerships based on trust, communication, and results.
-          </p>
-        </div>
+      <div className="flex items-center place-content-center pb-[5vw]">
+        <NavLink to="/contact" className="place-self-center">
+          <RoundedButton>Talk to us</RoundedButton>
+        </NavLink>
       </div>
     </div>
   );

@@ -106,12 +106,12 @@ const DynamicsCards = () => {
 
   return (
     <div className="w-[100vw] mt-[5vh]">
-      <h2 className="font-bold"> See Available Offerings &gt; &gt; </h2>
+      {/* <h2 className="font-bold"> See Available Offerings &gt; &gt; </h2> */}
       <Slider {...settings}>
         {dynamics_module.map((module) => (
           <>
             <div key={module.id} className="w-[100vw] mt-[5vh]">
-              <div className="h-[40vh] lg:h-[25vw] w-[45vw] lg:w-[20vw] mb-[2vh] flex flex-col flex-1 text-xs bg-white py-[5vh] px-[3vw] box-shadow2 shadow-lg box-border justify-center place-content-center place-items-center text-center border-white">
+              <div className="h-[40vh] lg:h-[25vw] w-[45vw] lg:w-[20vw] mb-[2vh] flex flex-col flex-1 text-xs bg-white py-[5vh] px-[3vw] box-shadow2 drop-shadow-lg shadow-lg box-border justify-center place-content-center place-items-center text-center border-white rounded-[20px]">
                 <img
                   src={module.icon}
                   alt="Dynamics 365 Icon"

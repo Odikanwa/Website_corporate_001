@@ -51,6 +51,9 @@ import supply_chain_mgt from "./dynamics_apps/supply_chain_mgt.svg";
 import dynamics from "./dynamics2.png";
 import wifi from "./wifi3.jpg";
 import wifi2 from "./wifi4.png";
+import bg1 from "./bg1.jpg";
+import bg2 from "./bg2.jpg";
+import bg3 from "./bg3.jpg";
 
 export {
   logo,
@@ -106,4 +109,7 @@ export {
   dynamics,
   wifi,
   wifi2,
+  bg1,
+  bg2,
+  bg3,
 };
