@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-import { hero } from "../assets";
+import { hero, bg } from "../assets";
 import RoundedButton from "./RoundedButton";
-// import Dropdown from "./Dropdown";
 import GoToTop from "./GoToTop";
 
 const HeroSection = () => {
 
   return (
     <div className="h-[100vh] w-[100vw] ">
-        <img src={hero} alt="herosection image" className="h-[100%] w-[100%] object-cover"/>
+        <img src={bg} alt="herosection image" className="h-[100%] w-[100%] object-cover"/>
 
         {/* <div className="hidden lg:flex m-0 absolute inset-0 top-[9%] left-[70%] text-center max-w-7xl items-start z-10">
         <Dropdown/>

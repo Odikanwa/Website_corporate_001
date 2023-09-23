@@ -58,8 +58,13 @@ import {
   BsFillAwardFill,
   BsFillGearFill,
   BsFillDoorOpenFill,
+  BsFillHandIndexFill,
+  BsArrowsAngleContract,
+  BsFillStopwatchFill,
+  BsCoin,
+  BsHourglassSplit,
 } from "react-icons/bs";
-import { MdOutlineJoinFull, MdOutlineSecurity, MdContactSupport } from "react-icons/md";
+import { MdOutlineJoinFull, MdOutlineSecurity, MdContactSupport, MdUpdate } from "react-icons/md";
 import {
   FaRecycle,
   FaHandshake,
@@ -71,7 +76,8 @@ import {
   FaLink,
   FaVideo,
   FaBolt,
-  FaWifi
+  FaWifi,
+  FaDiceD20
 } from "react-icons/fa";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -765,6 +771,72 @@ const benefits_managedWifi_chooseUs = [
   },
 ]
 
+const benefits_website = [
+  {
+    id: 0,
+    icon: <BsFillHandIndexFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Responsive Design",
+    desc: "Our templates are meticulously crafted to ensure seamless responsiveness across all devices, from desktops to smartphones and tablets. Your website will look stunning and function flawlessly on any screen size.",
+  },
+  {
+    id: 1,
+    icon: <FaDiceD20 className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Style Variety",
+    desc: "Choose from a wide array of styles, from minimalist and modern to bold and artistic. Our templates cater to diverse industries, including business, e-commerce, portfolio, blog, and more.",
+  },
+  {
+    id: 2,
+    icon: <FaCut className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Customisation",
+    desc: "Each template is fully customizable, allowing you to personalize colors, fonts, layouts, and content to align with your brand and vision. No coding expertise required.",
+  },
+  {
+    id: 3,
+    icon: <BsFillHandIndexFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "User-Friendly",
+    desc: "Our templates are designed with user experience in mind. Intuitive interfaces make it easy to modify and update your website, giving you full control over your online presence.",
+  },
+  {
+    id: 4,
+    icon:  <BsArrowsAngleContract className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Compatibility",
+    desc: "Our templates are designed to seamlessly integrate with popular website builders and content management systems, ensuring a smooth and hassle-free setup process.",
+  },
+  {
+    id: 5,
+    icon: <MdUpdate className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Support & Update",
+    desc: "Enjoy access to our dedicated support team and stay up-to-date with regular template updates, ensuring that your website remains current and functional.",
+  },
+]
+
+const benefits_website_chooseUs = [
+  {
+    id: 0,
+    icon: <BsFillStopwatchFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Time Saving",
+    desc: "Skip the lengthy design and development process. Our templates provide a ready-made foundation, allowing you to launch your website quickly and efficiently.",
+  },
+  {
+    id: 1,
+    icon: <BsFillAwardFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Professional Feel",
+    desc: "Benefit from the expertise of our design professionals, who create visually appealing and aesthetically pleasing templates that make your website stand out.",
+  },
+  {
+    id: 2,
+    icon: <BsCoin className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Affordability",
+    desc: "Save on design and development costs with our cost-effective templates, which offer exceptional value for their quality and features.",
+  },
+  {
+    id: 3,
+    icon: <BsHourglassSplit className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Future-Proof",
+    desc: "Regular updates and compatibility ensure that your website remains functional and engaging as web design trends evolve.",
+  },
+]
+
 export {
   services,
   microsoft_365,
@@ -779,4 +851,6 @@ export {
   benefits_surveillance_chooseUs,
   benefits_managedWifi,
   benefits_managedWifi_chooseUs,
+  benefits_website,
+  benefits_website_chooseUs,
 };

@@ -111,7 +111,7 @@ const DynamicsCards = () => {
         {dynamics_module.map((module) => (
           <>
             <div key={module.id} className="w-[100vw] mt-[5vh]">
-              <div className="h-[40vh] lg:h-[25vw] w-[45vw] lg:w-[20vw] mb-[2vh] flex flex-col flex-1 text-xs bg-white py-[5vh] px-[3vw] box-shadow2 drop-shadow-lg shadow-lg box-border justify-center place-content-center place-items-center text-center border-white rounded-[20px]">
+              <div className="h-[50vh] lg:h-[25vw] w-[45vw] lg:w-[20vw] mb-[2vh] flex flex-col flex-1 text-xs bg-white py-[5vh] px-[3vw] box-shadow2 drop-shadow-lg shadow-lg box-border justify-center place-content-center place-items-center text-center border-white rounded-[20px]">
                 <img
                   src={module.icon}
                   alt="Dynamics 365 Icon"

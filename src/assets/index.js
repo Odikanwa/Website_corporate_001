@@ -54,6 +54,10 @@ import wifi2 from "./wifi4.png";
 import bg1 from "./bg1.jpg";
 import bg2 from "./bg2.jpg";
 import bg3 from "./bg3.jpg";
+import web1 from "./web1.jpeg";
+import web2 from "./web2.png";
+import webMobile from "./webMobile.png";
+import bg from "./bg.jpg";
 
 export {
   logo,
@@ -112,4 +116,8 @@ export {
   bg1,
   bg2,
   bg3,
+  web1,
+  web2,
+  webMobile,
+  bg,
 };
