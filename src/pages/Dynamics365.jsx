@@ -3,6 +3,7 @@ import { benefits_dynamics365 } from "../constants";
 import { NavLink } from "react-router-dom";
 import RoundedButton from "../components/RoundedButton";
 import DynamicsCards from "../components/DynamicsCard";
+import { styles } from "../styles";
 
 const BenefitCard = () => {
   return (
@@ -54,7 +55,7 @@ const Dynamics365 = () => {
         </div>
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         What&apos;s the Service About?
       </h1>
 
@@ -73,7 +74,7 @@ const Dynamics365 = () => {
         </p>
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         Why You Need It
       </h1>
 
@@ -81,7 +82,7 @@ const Dynamics365 = () => {
         <BenefitCard />
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         What We Offer You
       </h1>
 

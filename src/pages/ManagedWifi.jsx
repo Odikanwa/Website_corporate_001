@@ -5,6 +5,7 @@ import {
   benefits_managedWifi_chooseUs,
 } from "../constants";
 import RoundedButton from "../components/RoundedButton";
+import { styles } from "../styles";
 
 const BenefitCard = () => {
   return (
@@ -77,7 +78,7 @@ const ManagedWifiPage = () => {
         </div>
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         What&apos;s the Service About?
       </h1>
 
@@ -95,7 +96,7 @@ const ManagedWifiPage = () => {
         </p>
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         What We Offer You
       </h1>
 
@@ -103,7 +104,7 @@ const ManagedWifiPage = () => {
         <BenefitCard />
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         Why Choose Us
       </h1>
 

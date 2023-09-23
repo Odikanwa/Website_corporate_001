@@ -3,6 +3,7 @@ import { m365 } from "../assets";
 import { benefits_microsoft365 } from "../constants";
 import { NavLink } from "react-router-dom";
 import RoundedButton from "../components/RoundedButton";
+import { styles } from "../styles";
 
 const BenefitCard = () => {
   return (
@@ -53,7 +54,7 @@ const Microsoft365 = () => {
       </div>
 
       
-      <h1 className="font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         What&apos;s the Service About?
       </h1>
 
@@ -74,7 +75,7 @@ const Microsoft365 = () => {
         </p>
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         Why You Need It
       </h1>
 
@@ -82,7 +83,7 @@ const Microsoft365 = () => {
         <BenefitCard />
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         What We Offer You
       </h1>
 

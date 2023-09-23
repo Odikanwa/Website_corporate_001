@@ -5,6 +5,8 @@ const styles = {
 
   hover: "p-[10px] text-white bg-[#0ef]",
 
+  textGradient: "text-[40px] font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-600 to-red-400",
+
   heroHeadText:
     "font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
   heroSubText:

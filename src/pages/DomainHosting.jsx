@@ -2,6 +2,7 @@ import { domains_photo } from "../assets";
 import { benefits_domainhosting } from "../constants";
 import { NavLink } from "react-router-dom";
 import RoundedButton from "../components/RoundedButton";
+import { styles } from "../styles";
 
 const BenefitCard = () => {
   return (
@@ -52,7 +53,7 @@ const DomainHosting = () => {
         </div>
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         What&apos;s the Service About?
       </h1>
 
@@ -72,7 +73,7 @@ const DomainHosting = () => {
         </p>
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         What We Offer You
       </h1>
 
@@ -140,7 +141,7 @@ const DomainHosting = () => {
         </div>
       </div>
 
-      <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
+      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
         Why Choose Us
       </h1>
 

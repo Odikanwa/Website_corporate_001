@@ -2,6 +2,7 @@ import { logo } from "../assets";
 import RoundedButton from "../components/RoundedButton";
 import BenefitCard from "../components/BenefitCard";
 import { NavLink } from "react-router-dom";
+import { styles } from "../styles";
 
 const About = () => {
   return (
@@ -38,7 +39,7 @@ const About = () => {
       <div className="w-[100%] h-auto flex flex-col lg:flex-col bg-[#F8F8FF] text-black pb-[10vh]">
         <div className="px-[10vw] ">
         <div className="pb-[4%] lg:pb-0">
-          <h1 className="text-center font-medium text-[30px] py-[10vh]">
+        <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
             What We Do
           </h1>
           <div className="place-content-center place-items-center justify-center bg-[url('../src/assets/bg3.jpg')] border-x-slate-100 rounded-[30px] bg-white py-[5vh] text-black mx-[3vw] lg:mx-[5vw] border-[2px] drop-shadow-md shadow-md">
@@ -53,7 +54,7 @@ const About = () => {
             </p>
           </div>
 
-          <h1 className="font-medium text-[30px] text-center my-[15vh]">
+          <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
             What We Stand For
           </h1>
           </div>
@@ -86,7 +87,7 @@ const About = () => {
             </div>
           </div>
 
-          <h1 className="text-center font-medium text-[30px] pt-[10vh] pb-[5vh]">
+          <h1 className={`font-medium text-[30px] text-center mt-[15vh] mb-[10vh] px-[10vw] text-black ${styles.textGradient}`}>
             What&apos;s in For You?
           </h1>
         </div>

@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { website_photo, web1, web2, webMobile } from "../assets";
 import { benefits_website, benefits_website_chooseUs } from "../constants";
 import RoundedButton from "../components/RoundedButton";
+import { styles } from "../styles";
 
 const BenefitCard = () => {
   return (
@@ -77,8 +78,8 @@ const WebsiteDev = () => {
 
       <div className="h-auto w-[100vw] flex flex-col justify-center bg-[#F8F8FF] text-black">
        
-        <h1 className="font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black">
-          Want a Custom Professional Website?
+        <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
+          Want a Custom Website?
         </h1>
         <div className="w-[95vw] lg:w-[75vw] flex justify-center ml-[2vw] lg:ml-0 px-[2vw] lg:px-0 place-self-center rounded-t-[40px] bg-red-500 drop-shadow-lg shadow-lg">
           <img
@@ -89,7 +90,7 @@ const WebsiteDev = () => {
         </div>
         <div className="px-[10vw]">
 
-        <h1 className="font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black">
+        <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
           What We Offer You
         </h1>        
 
@@ -106,8 +107,8 @@ const WebsiteDev = () => {
           </div>
         </div>
 
-        <h1 className="font-medium text-[30px] text-center my-[15vh] text-black">
-          Why Choose Us
+        <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
+          Why Choose Us?
         </h1>
         </div>
 
