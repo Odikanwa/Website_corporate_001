@@ -58,6 +58,7 @@ import web1 from "./web1.jpeg";
 import web2 from "./web2.png";
 import webMobile from "./webMobile.png";
 import bg from "./bg.jpg";
+import about_oreegi from "./about_oreegi.jpg"
 
 export {
   logo,
@@ -120,4 +121,5 @@ export {
   web2,
   webMobile,
   bg,
+  about_oreegi,
 };

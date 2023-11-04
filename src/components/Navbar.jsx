@@ -38,7 +38,7 @@ const Navbar = () => {
 
   const handleScroll = () => {
     if (window.scrollY) {
-      setNavOpacity("bg-opacity-50");
+      setNavOpacity("bg-opacity-50 backdrop-filter backdrop-blur-sm");
     }
     if (window.scrollY == 0.0) {
       setNavOpacity("bg-opacity-0");
@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <nav
     ref={navLinkRef}
-      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20 bg-[#2257bf] ${navOpacity}`}
+      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20 bg-[#293e6b] ${navOpacity}`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link

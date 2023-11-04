@@ -37,6 +37,13 @@ import {
   project_operations,
   sales,
   supply_chain_mgt,
+  m365,
+  dynamics,
+  domains_photo,
+  network_photo,
+  surveillance_photo,
+  website_photo,
+  wifi,
 } from "../assets";
 
 import {
@@ -109,30 +116,44 @@ const services = [
   {
     id: "microsoft365",
     title: "Microsoft 365",
+    icon: m365,
+    short_desc: "A comprehensive suite of productivity tools(Windows applications) and cloud-based services developed by Microsoft for businesses."
   },
   {
     id: "dynamics365",
     title: "Dynamics 365",
+    icon: dynamics,
+    short_desc: "A broad suite of integrated business applications that combines customer relationship management (CRM) and enterprise resource planning (ERP) functionalities."
   },
   {
     id: "domainhosting",
     title: "Domain Name & Hosting",
+    icon: domains_photo,
+    short_desc: "We offer domain names and domain hosting - shared hosting, virtual servers and dedicated servers as well as SSL certificates for securrity."
   },
   {
     id: "websitedev",
     title: "Custom Websites",
+    icon: website_photo,
+    short_desc: "Pick from our easy-to-use stunning and responsive corporate website templates or have our design and engineering team build a custom website for you from scratch."
   },
   {
     id: "lan",
     title: "LAN Design & Implementation",
+    icon: network_photo,
+    short_desc: "Explore the realm of next-generation connectivity and network solutions with our specialized network design and implementation services."
   },
   {
     id: "surveillance",
     title: "Surveillance Systems",
+    icon: surveillance_photo,
+    short_desc: "Choose our comprehensive video surveillance and intelligent analytics, for a safer, more secure environment."
   },
   {
     id: "managedwifi",
     title: "Managed Wifi",
+    icon: wifi,
+    short_desc: "Have our team of specialist network engineers manage the configuration, patching and maintenance of your Wifi infrastructure."
   },
   // {
   //   id: "marketplace",
