@@ -11,7 +11,7 @@ const Dynamics365 = () => {
     <div className="w-[100vw] h-auto lg:h-auto bg-[#F8F8FF] text-black py-[3vh] text-[14px] pb-[8vh]">
       <div className="px-[10vw]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[5%] lg:py-[3%]">
-        Dynamics 365
+        Dynamics <span className="text-[#14adb8]">365.</span>
       </h1>
       <div className="lg:pr-[35%] pb-[4%] lg:pb-0">
         <p>

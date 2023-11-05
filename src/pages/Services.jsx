@@ -6,10 +6,20 @@ import Networking from "../components/Networking";
 import Hardware from "../components/Hardware";
 import Dynamics365 from "../components/Dynamics365";
 import ManagedWifi from "../components/ManagedWifi";
+import { bg } from "../assets";
+import Solutions from "../components/Services";
 
 const Services = () => {
   return (
     <>
+    <div className="h-auto w-[100vw]">
+    <img
+        src={bg}
+        alt="herosection image"
+        className="h-[35vh] w-[100%] object-cover opacity-50"
+      />
+      <Solutions/>
+    </div>
     <Domains/>
     <WebsiteDev/>
     <Networking/>

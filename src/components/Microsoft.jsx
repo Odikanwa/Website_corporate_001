@@ -5,7 +5,7 @@ import GoToTop from "./GoToTop";
 
 const Microsoft = () => {
   return (
-    <div className="w-[100vw] h-auto lg:h-auto bg-[#2257bf] text-white text-[14px] px-[10vw] py-[3vh]">
+    <div className="w-[100vw] h-auto lg:h-auto bg-[#10295B] text-white text-[14px] px-[10vw] py-[3vh]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[5%] lg:py-[3%]">
         Microsoft 365
       </h1>

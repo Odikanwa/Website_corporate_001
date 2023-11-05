@@ -7,7 +7,7 @@ const Surveillance = () => {
   return (
     <div className="h-auto w-[100vw] bg-[#F8F8FF] text-black px-[10vw] pb-[10vh] text-[14px] py-[3vh]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[10%] lg:py-[3%]">
-        Surveillance Systems
+        Surveillance <span className="text-[#14adb8]">Systems.</span>
       </h1>
       <div className="flex flex-col lg:flex-row content-between justify-center ">
         <div className="w-[100%] lg:w-[50%] lg:pr-[12%] py-[5%] lg:py-0 flex text-center justify-center place-items-start">

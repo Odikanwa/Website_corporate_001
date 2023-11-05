@@ -5,7 +5,7 @@ import GoToTop from "./GoToTop";
 
 const ManagedWifi = () => {
   return (
-    <div className="h-auto w-[100vw] bg-[#2257bf] text-white px-[10vw] pb-[10vh] text-[14px] py-[2vh]">
+    <div className="h-auto w-[100vw] bg-[#10295B] text-white px-[10vw] pb-[10vh] text-[14px] py-[2vh]">
       <h1 className="font-bold text-[20px] lg:text-[25px] py-[5%] lg:py-[3%]">
         Managed Wifi
       </h1>
