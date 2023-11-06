@@ -8,13 +8,13 @@ import { styles } from "../styles";
 const BenefitCard = () => {
   return (
     // <div className="h-auto w-[40vw] bg-red-500 flex gap-10 box-content text-[12px] rounded-2xl">
-    <div className="h-auto w-[100%] flex flex-col lg:flex-row flex-wrap gap-[5vh] lg:gap-[2vw] py-[10vh] mr-[5vw] place-self-center justify-center place-items-center items-center">
+    <div className="h-auto w-[100%] flex flex-col lg:flex-row flex-wrap gap-[5vh] lg:gap-[2vw] py-[2vh] mr-[5vw] place-self-center justify-center place-items-center items-center">
       {benefits_dynamics365.map((benefit) => (
         <div
           key={benefit.id}
-          className="w-[80vw] lg:w-[30vw] flex flex-row text-left px-[4vw] lg:px-[2vw] py-[6vh] gap-3 bg-white border-[1px] justify-center place-content-center drop-shadow-md shadow-md rounded-[20px]"
+          className="w-[80vw] lg:w-[30vw] flex flex-row text-left px-[4vw] lg:px-[2vw] py-[6vh] gap-3 text-white border-[1px] justify-center place-content-center bg-[#10295B] drop-shadow-md shadow-md rounded-[20px]"
         >
-          <div className="text-cyan-500">{benefit.icon}</div>
+          <div className="text-white">{benefit.icon}</div>
           <div className="flex flex-col">
             <h1 className="font-medium text-[14px] py-[2vh]">
               {benefit.title}
@@ -30,38 +30,20 @@ const BenefitCard = () => {
 const Dynamics365 = () => {
   return (
     <div className="h-auto lg:h-auto w-[100vw]v bg-[#F8F8FF] text-white text-[14px]">
-      <div className="px-[10vw] pb-[10vh] pt-[10vh] bg-[#2257bf]">
-        <h1 className="font-bold text-[25px] lg:text-[30px] py-[10%] lg:pt-[5%] lg:pb-[5vh]">
-          Dynamics 365
+      <div className="w-[100%] h-[35vh] bg-[url(assets/about_oreegi.jpg)] py-[5vh] flex flex-col ">
+        <h1 className="w-[50%] place-self-center text-center font-bold text-[25px] lg:text-[30px] mt-[3%] py-[10%] lg:py-[2%]  bg-[#10295B] opacity-70 rounded-[50px]">
+          Dynamics Applications
         </h1>
-        <div className="flex flex-col-reverse lg:flex-row content-between justify-center bg-[#2257bf]] text-white">
-          <div className="w-[100%] lg:w-[50%] lg:pr-[12%]">
-            <p className="pb-[2vh] font-medium text-[18px]">
-              Unlock the power of seamless digital transformation with
-              Microsoft&apos; Dynamics 365 suite. Elevate your business to new
-              heights with intelligent, cloud-based solutions for sales,
-              customer service, marketing, finance, operations, and more.
-            </p>
-          </div>
-          <div className=" bg-white w-[100%] lg:w-[50%] lg:ml-[5%] pt-[9%] lg:pt-[0px] pb-[10%] mb-[3vh] lg:mb-0 lg:pb-0 flex text-center justify-center place-items-center rounded-[500px]">
-            <img
-              src={dynamics}
-              alt="domains photo"
-              height={320}
-              width={360}
-              className="object-contain rounded-[200px] px-[5vw] lg:px-0"
-            />
-          </div>
-        </div>
       </div>
-
-      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
-        What&apos;s the Service About?
-      </h1>
-
-      <div className="place-content-center place-items-center justify-center bg-[url('../src/assets/bg3.jpg')] border-b-[3px] border-x-slate-100 rounded-[30px] bg-white text-black mx-[3vw] lg:mx-[20vw] py-[5vh] border-white border-[2px] drop-shadow-md shadow-md">
-        <p className="px-[10vw] lg:px-[5vw] text-left border-l-[5px] border-l-cyan-500">
-          Dynamics 365 is a comprehensive cloud-based platform developed by
+      
+      <div className="px-[10vw] bg-[#F8F8FF] text-black py-[5vh]">
+        <h1 className="font-bold text-[25px] lg:text-[30px] py-[5%] lg:py-[2%]">
+          Dynamics <span className="text-[#14adb8]">365.</span>
+        </h1>
+        <div className="flex flex-col lg:flex-row content-between justify-center ">
+        <div className="w-[100%] lg:w-[50%] lg:mr-[10%]">
+            <p className="pb-[2vh] text-left">
+            Dynamics 365 is a comprehensive cloud-based platform developed by
           Microsoft, designed to streamline and optimize various aspects of
           business operations. It integrates a suite of interconnected
           applications and services, offering solutions for customer
@@ -71,23 +53,38 @@ const Dynamics365 = () => {
           CRM capabilities. Additionally, it supports the automation of
           financial, supply chain, and human resources processes with its ERP
           functionalities.
-        </p>
+            </p>
+          </div>
+          <div className="w-[100%] lg:w-[50%] lg:py-0 flex text-center justify-center place-items-start">
+            
+            <img
+              src={dynamics}
+              alt="network photo"
+              height={320}
+              width={320}
+              className="object-contain rounded-[200px] shadow-md"
+            />
+          </div>
+        </div>
       </div>
 
-      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
-        Why You Need It
-      </h1>
 
-      <div className="h-auto w-[98vw] text-black bg-[#F4F8FD] bg-[url('../src/assets/bg3.jpg')]  border-[3px] drop-shadow-xl border-white rounded-[100px] ml-[0.8vw]">
-        <BenefitCard />
-      </div>
+    
 
-      <h1 className={`font-medium text-[30px] text-center my-[15vh] px-[10vw] text-black ${styles.textGradient}`}>
-        What We Offer You
+      <h1 className={`font-bold text-[30px] text-center my-[3vh] px-[10vw] text-black`}>
+        What We <span className="text-[#14adb8]">Offer You.</span>
       </h1>
 
       <div className="h-auto w-[95%] ml-[1%] pt-[2vh] pb-[8vh] items-center place-self-center text-black bg-[url('../src/assets/bg3.jpg')] border-[3px] border-white px-[2.5vw] drop-shadow-xl shadow-md rounded-[100px]">
         <DynamicsCards />
+      </div>
+      
+      <h1 className={`font-bold text-[30px] text-center mt-[8vh] mb-[2vh] px-[10vw] text-black`}>
+        Why You <span className="text-[#14adb8]">Need It.</span>
+      </h1>
+
+      <div className="h-auto w-[98vw] text-black bg-[#F4F8FD] ml-[0.8vw]">
+        <BenefitCard />
       </div>
 
       <div className="ml-[30%] lg:ml-[45%] pt-[5vh] pb-[10vh]">

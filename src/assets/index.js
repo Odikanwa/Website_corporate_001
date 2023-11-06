@@ -48,7 +48,7 @@ import marketing from "./dynamics_apps/marketing.svg";
 import project_operations from "./dynamics_apps/project_operations.svg";
 import sales from "./dynamics_apps/sales.svg";
 import supply_chain_mgt from "./dynamics_apps/supply_chain_mgt.svg";
-import dynamics from "./dynamics2.png";
+import dynamics from "./dynamics2.jpg";
 import wifi from "./wifi3.jpg";
 import wifi2 from "./wifi4.png";
 import bg1 from "./bg1.jpg";
@@ -58,7 +58,9 @@ import web1 from "./web1.jpeg";
 import web2 from "./web2.png";
 import webMobile from "./webMobile.png";
 import bg from "./bg.jpg";
-import about_oreegi from "./about_oreegi.jpg"
+import about_oreegi from "./about_oreegi.jpg";
+import capsl from "./capsl.png";
+import pau from "./pau.jpg";
 
 export {
   logo,
@@ -122,4 +124,6 @@ export {
   webMobile,
   bg,
   about_oreegi,
+  capsl,
+  pau,
 };
