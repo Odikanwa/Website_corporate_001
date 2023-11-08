@@ -135,7 +135,7 @@ const Navbar = () => {
                   }}
                 >
                   {/* <Link onClick={() => navigate(`/${link.id}`)}> */}
-                  <NavLink to={`/${link.id}`}>
+                  <NavLink to={`/${link.id}`} onClick={GoToTop()}>
                     {link.title}
                   </NavLink>
                   {link.title == "Services" && active
@@ -156,7 +156,7 @@ const Navbar = () => {
                         >
                           <NavLink
                             to={`/${service.id}`}
-                            onClick={() => setToggle(!toggle)}
+                            onClick={() => {setToggle(!toggle); GoToTop();}}
                             className={({ isActive, isPending }) =>
                   isPending ? "" : isActive ? "text-[#0ef] font-bold" : ""
                 }

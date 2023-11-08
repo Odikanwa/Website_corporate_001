@@ -103,7 +103,7 @@ const Microsoft365 = () => {
         </div>
       </div>
 
-      <h1 className={`font-bold text-[30px] text-center my-0 lg:my-[5vh] px-[10vw] text-black`}>
+      <h1 className={`font-bold text-[30px] text-center my-0 mb-[5vh] lg:my-[5vh] px-[10vw] text-black`}>
         Why You <span className="text-[#14adb8]">Need It.</span>
       </h1>
 
@@ -111,7 +111,7 @@ const Microsoft365 = () => {
         <BenefitCard />
       </div>
 
-      <div className="flex items-center place-content-center pb-[5vw]">
+      <div className="flex items-center place-content-center pb-[5vh]">
         <NavLink to="/contact" className="place-self-center">
           <RoundedButton>Talk to us</RoundedButton>
         </NavLink>

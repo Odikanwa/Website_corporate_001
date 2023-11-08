@@ -27,10 +27,11 @@ const About = () => {
         </div>
       </div>
 
-      <About_Component/>
+<div className="mb-[-5vh]"><About_Component/></div>
+      
 
       <div className="w-[100%] h-auto flex flex-col lg:flex-col bg-[#F8F8FF] text-black pb-[10vh]">
-        <div className="px-[10vw] ">
+        <div className=" ">
         <div className="pb-[4%] lg:pb-0">
         <h1 className={`font-bold text-[30px] text-center mt-0 mb-[5vh] lg:my-[5vh] px-[10vw] text-black`}>
             What We <span className="text-[#14adb8]">Do.</span>
@@ -52,8 +53,8 @@ const About = () => {
           </h1>
           </div>
 
-          <div className="w-[85vw] flex flex-col lg:flex-row justify-center gap-[8%] pt-[5vh] bg-[url('../src/assets/bg1.jpg')] border-[3px] border-white drop-shadow-md shadow-lg rounded-[100px]">
-            <div className="w-[80vw] lg:w-[35vw] flex flex-col py-[10vh] px-[3vw] bg-white border-[1px] justify-center place-items-center place-self-start box-shadow2 drop-shadow-lg shadow-lg rounded-[30px] ">
+          <div className="w-[90vw] lg:w-[85vw] flex flex-col lg:flex-row justify-center ml-[5vw] gap-[8%] pt-[5vh] bg-[url('../src/assets/bg1.jpg')] border-[3px] border-white drop-shadow-md shadow-lg rounded-[100px]">
+            <div className="w-[80vw] lg:w-[35vw] flex flex-col py-[10vh] px-[3vw] bg-white border-[1px] justify-center place-items-center place-self-start box-shadow2 drop-shadow-lg shadow-lg rounded-[30px]">
               <h1 className="font-bold text-[20px]">
                 Our <span className="text-[#14adb8]">Vision</span>
               </h1>

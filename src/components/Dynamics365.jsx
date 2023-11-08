@@ -34,7 +34,7 @@ const Dynamics365 = () => {
       </div>
 
 <div className="w-[100vw] px-[10vw]">
-      <NavLink to="dynamics365"  onClick={() => GoToTop()}>
+      <NavLink to="/dynamics365"  onClick={() => GoToTop()}>
         <RoundedButton>Learn more</RoundedButton>
       </NavLink>
       </div>
