@@ -70,6 +70,8 @@ import {
   BsFillStopwatchFill,
   BsCoin,
   BsHourglassSplit,
+  BsSearch,
+  BsShieldFillCheck,
 } from "react-icons/bs";
 import { MdOutlineJoinFull, MdOutlineSecurity, MdContactSupport, MdUpdate } from "react-icons/md";
 import {
@@ -84,7 +86,8 @@ import {
   FaVideo,
   FaBolt,
   FaWifi,
-  FaDiceD20
+  FaDiceD20,
+  FaServer, 
 } from "react-icons/fa";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -552,6 +555,31 @@ const benefits_dynamics365 = [
 const benefits_domainhosting = [
   {
     id: 0,
+    icon: <BsSearch className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
+    title: "Domain Name Registeration",
+    desc: "Choose from a diverse selection of domain extensions and secure a unique web address that reflects your brand identity. Our user-friendly domain search and registration process makes it easy to find and register the perfect domain for your website.",
+  },
+  {
+    id: 1,
+    icon: (
+      <FaServer className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />
+    ),
+    title: "Web Hosting",
+    desc: "Our hosting solutions cater to websites of all sizes, from personal blogs to e-commerce platforms and corporate websites. We offer a variety of hosting options, including shared hosting, VPS hosting, dedicated servers, and cloud hosting, ensuring that your website performs optimally and reliably.",
+  },
+  {
+    id: 2,
+    icon: (
+      <BsShieldFillCheck className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />
+    ),
+    title: "SSL Security",
+    desc: "Ensure secure data transmission between your user's browser and the website server, safeguarding sensitive information like passwords and credit card details, and improving your site's SEO rankings.. Boost website trustworthiness by displaying a padlock icon and 'https://' in the URL, assuring visitors of data protection.",
+  },
+];
+
+const benefits_domainhosting_ChooseUs = [
+  {
+    id: 0,
     icon: <BsClockFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
     title: "Reliable Infrastructure",
     desc: "Our servers ensure high uptime, fast loading speeds, and seamless performance for your website.",
@@ -587,7 +615,7 @@ const benefits_lan = [
     id: 0,
     icon: <FaPenNib className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
     title: "Network Design",
-    desc: " Our team of experienced network architects crafts comprehensive network designs tailored to your specific needs. We analyze your requirements, plan efficient architectures, and create blueprints that optimize performance, scalability, and security.",
+    desc: "We deliver comprehensive network designs tailored to your specific needs. We analyze your requirements, plan efficient architectures, and create blueprints that optimize performance, scalability, and security.",
   },
   {
     id: 1,
@@ -595,7 +623,7 @@ const benefits_lan = [
       <BsFillHddNetworkFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />
     ),
     title: "Network Implementation",
-    desc: "From conception to realization, we transform network designs into tangible, functional solutions. Our implementation process is meticulous, ensuring seamless deployment of hardware, software, and configurations to bring your network vision to life.",
+    desc: "From conception to realization, we transform network designs into functional solutions. Our implementation process is meticulous, ensuring seamless deployment of hardware, software, and configurations to bring your network vision to life.",
   },
   {
     id: 2,
@@ -704,7 +732,7 @@ const benefits_surveillance_chooseUs = [
     id: 0,
     icon: <BsFillAwardFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
     title: "Expertise",
-    desc: "Our team comprises skilled professionals with a deep understanding of surveillance technology, ensuring effective and reliable system design and implementation.",
+    desc: "Our skilled professionals have deep understanding of surveillance technology, ensuring effective and reliable system design and implementation.",
   },
   {
     id: 1,
@@ -764,7 +792,7 @@ const benefits_managedWifi_chooseUs = [
     id: 0,
     icon: <BsFillAwardFill className="h-[50px] lg:h-[60px] w-[50px] lg:w-[60px]" />,
     title: "Expertise",
-    desc: "Our team of certified professionals brings extensive experience in wireless technology, ensuring the deployment and management of top-tier Wi-Fi networks.",
+    desc: "Our professionals have extensive experience in wireless technology, ensuring the deployment and management of top-tier Wi-Fi networks.",
   },
   {
     id: 1,
@@ -866,6 +894,7 @@ export {
   benefits_microsoft365,
   benefits_dynamics365,
   benefits_domainhosting,
+  benefits_domainhosting_ChooseUs,
   benefits_lan,
   benefits_lan_chooseUS,
   benefits_surveillance,

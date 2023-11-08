@@ -5,7 +5,7 @@ import { about_oreegi } from "../assets";
 
 const About = () => {
   return (
-    <div className="w-[100vw] h-auto bg-[#F8F8FF] text-black px-[10vw] pt-[5vh] py-[10vh] text-[14px]">
+    <div className="w-[100vw] h-auto bg-[#F8F8FF] text-black px-[10vw] pt-[2vh] pb-[10vh] text-[14px]">
       <h1 className="font-bold text-[20px] lg:text-[25px] pt-[5%] pb-[3%] ">
         About <span className="text-[#14adb8]">Us.</span>
       </h1>

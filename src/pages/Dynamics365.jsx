@@ -3,11 +3,10 @@ import { benefits_dynamics365 } from "../constants";
 import { NavLink } from "react-router-dom";
 import RoundedButton from "../components/RoundedButton";
 import DynamicsCards from "../components/DynamicsCard";
-import { styles } from "../styles";
+// import { styles } from "../styles";
 
 const BenefitCard = () => {
   return (
-    // <div className="h-auto w-[40vw] bg-red-500 flex gap-10 box-content text-[12px] rounded-2xl">
     <div className="h-auto w-[100%] flex flex-col lg:flex-row flex-wrap gap-[5vh] lg:gap-[2vw] py-[2vh] mr-[5vw] place-self-center justify-center place-items-center items-center">
       {benefits_dynamics365.map((benefit) => (
         <div
@@ -40,7 +39,7 @@ const Dynamics365 = () => {
         <h1 className="font-bold text-[25px] lg:text-[30px] py-[5%] lg:py-[2%]">
           Dynamics <span className="text-[#14adb8]">365.</span>
         </h1>
-        <div className="flex flex-col lg:flex-row content-between justify-center ">
+        <div className="flex flex-col-reverse lg:flex-row content-between justify-center ">
         <div className="w-[100%] lg:w-[50%] lg:mr-[10%]">
             <p className="pb-[2vh] text-left">
             Dynamics 365 is a comprehensive cloud-based platform developed by
@@ -55,7 +54,7 @@ const Dynamics365 = () => {
           functionalities.
             </p>
           </div>
-          <div className="w-[100%] lg:w-[50%] lg:py-0 flex text-center justify-center place-items-start">
+          <div className="w-[100%] lg:w-[50%] pb-5 lg:py-0 flex text-center justify-center place-items-start">
             
             <img
               src={dynamics}
@@ -71,7 +70,7 @@ const Dynamics365 = () => {
 
     
 
-      <h1 className={`font-bold text-[30px] text-center my-[3vh] px-[10vw] text-black`}>
+      <h1 className={`font-bold text-[30px] text-center mt-0 my-[3vh] lg:my-[3vh] px-[10vw] text-black`}>
         What We <span className="text-[#14adb8]">Offer You.</span>
       </h1>
 
@@ -87,7 +86,7 @@ const Dynamics365 = () => {
         <BenefitCard />
       </div>
 
-      <div className="ml-[30%] lg:ml-[45%] pt-[5vh] pb-[10vh]">
+      <div className="ml-[30%] lg:ml-[45%] pt-0 pb-[5vh]">
         <NavLink to="/contact">
           <RoundedButton>Talk to us</RoundedButton>
         </NavLink>

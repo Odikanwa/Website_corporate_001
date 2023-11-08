@@ -3,7 +3,7 @@ import { m365 } from "../assets";
 import { benefits_microsoft365 } from "../constants";
 import { NavLink } from "react-router-dom";
 import RoundedButton from "../components/RoundedButton";
-import { styles } from "../styles";
+
 
 const BenefitCard = () => {
   return (
@@ -40,7 +40,7 @@ const Microsoft365 = () => {
         <h1 className="font-bold text-[25px] lg:text-[30px] py-[5%] lg:py-[2%]">
           Microsoft <span className="text-[#14adb8]">365.</span>
         </h1>
-        <div className="flex flex-col lg:flex-row content-between justify-center ">
+        <div className="flex flex-col-reverse lg:flex-row content-between justify-center ">
         <div className="w-[100%] lg:w-[50%] lg:mr-[10%]">
             <p className="pb-[2vh] text-left">
             Microsoft 365, formerly known as Office 365, is a broad suite
@@ -57,7 +57,7 @@ const Microsoft365 = () => {
           and more.
             </p>
           </div>
-          <div className="w-[100%] lg:w-[50%] lg:py-0 flex text-center justify-center place-items-start">
+          <div className="w-[100%] lg:w-[50%] pb-5 lg:py-0 flex text-center justify-center place-items-start">
             
             <img
               src={m365}
@@ -72,7 +72,7 @@ const Microsoft365 = () => {
 
      
 
-      <h1 className={`font-bold text-[30px] text-center my-[5vh] px-[10vw] text-black`}>
+      <h1 className={`font-bold text-[30px] text-center my-0 lg:my-[5vh] px-[10vw] text-black`}>
         What We <span className="text-[#14adb8]">Offer You.</span>
       </h1>
 
@@ -103,7 +103,7 @@ const Microsoft365 = () => {
         </div>
       </div>
 
-      <h1 className={`font-bold text-[30px] text-center my-[5vh] px-[10vw] text-black`}>
+      <h1 className={`font-bold text-[30px] text-center my-0 lg:my-[5vh] px-[10vw] text-black`}>
         Why You <span className="text-[#14adb8]">Need It.</span>
       </h1>
 
