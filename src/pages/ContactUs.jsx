@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup"
+import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import RoundedButton from "../components/RoundedButton";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
@@ -23,10 +23,7 @@ const schema = yup
     service_type: yup.string().required(),
     message: yup.string().max(300).required(),
   })
-  .required()
-
-
-
+  .required();
 
 const ContactUs = () => {
   // const [data, setData] = useState("");
@@ -38,7 +35,7 @@ const ContactUs = () => {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
-  })
+  });
 
   const sendEmail = () => {
     // e.preventDefault();
@@ -64,13 +61,13 @@ const ContactUs = () => {
   };
 
   const clearForm = () => {
-    document.getElementById('company_name').value = " ";
-    document.getElementById('company_address').value = " ";
-    document.getElementById('user_email').value = " ";
-    document.getElementById('user_number').value = " ";
-    document.getElementById('service_type').value = " ";
-    document.getElementById('message').value = " ";
-  }
+    document.getElementById("company_name").value = " ";
+    document.getElementById("company_address").value = " ";
+    document.getElementById("user_email").value = " ";
+    document.getElementById("user_number").value = " ";
+    document.getElementById("service_type").value = " ";
+    document.getElementById("message").value = " ";
+  };
 
   const notify = () => toast("Hi there! Your mail has been sent.");
 
@@ -89,7 +86,7 @@ const ContactUs = () => {
       </div>
 
       <ToastContainer />
-      
+
       <div className="h-auto lg:h-auto w-[100vw] bg-[#F8F8FF] flex flex-col lg:flex-row justify-center gap-[8vw] pb-[10vh]">
         <div
           className={`h-auto w-[90vw] lg:w-[30vw] flex flex-col gap-[5vh] justify-center place-content-center text-center mt-[-10vh]`}
@@ -116,12 +113,10 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
+
         <div
           className={`h-auto w-[90vw] lg:w-[30vw] ml-[5vw] bg-white border-[2px] flex flex-col py-[5vh] px-[5vw] lg:px-[3vw] justify-center place-content-center text-center mt-[10vh] lg:mt-[-10vh] rounded-[15px] box-shadow2 shadow-lg`}
         >
-          {/* <form ref={form}
-            onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
-          > */}
           <form ref={form} onSubmit={handleSubmit(sendEmail)}>
             {/* <Header /> */}
             <AiFillWechat className="justify-center place-content-center align-middle p-[8px] text-[45px] text-orange-500 border-[2px] border-orange-500 rounded-[50px] ml-[30%]" />
@@ -164,20 +159,22 @@ const ContactUs = () => {
               className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] text-black border-[1px] shadow-lg bg-white form-shadow`}
             />
             <p className="text-red-500">{errors.user_number?.message}</p>
-            <select 
-            {...register("service_type")}
-            id="service_type"
-            name="service_type"
+            <select
+              {...register("service_type")}
+              id="service_type"
+              name="service_type"
               className={`w-full h-auto pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] text-black border-[1px] shadow-lg bg-white form-shadow`}
             >
-              <option value="placeholder">
-                Service Type
-              </option>
+              <option value="placeholder">Service Type</option>
               <option value="Microsoft 365">Microsoft 365</option>
               <option value="Dynamics 365">Dynamics 365</option>
-              <option value="Domain Name & Hosting">Domain Name & Hosting</option>
+              <option value="Domain Name & Hosting">
+                Domain Name & Hosting
+              </option>
               <option value="Custom Websites">Custom Websites</option>
-              <option value="Lan Design & Implementation">Lan Design & Implementation</option>
+              <option value="Lan Design & Implementation">
+                Lan Design & Implementation
+              </option>
               <option value="Surveillance Sytems">Surveillance Sytems</option>
               <option value="Managed Wifi">Managed Wifi</option>
             </select>
@@ -195,9 +192,9 @@ const ContactUs = () => {
               value="Send"
               className=" text-[#000] text-md font-bold w-[37vw] lg:w-[150px] p-[10px] text-center justify-center rounded-[100px] mt-5 cursor-pointer border-white bg-white border-[2px] hover:bg-[#0ef] hover:shadow-[#0ef] shadow-lg drop-shadow-lg"
             />
-            {/* <RoundedButton>Send</RoundedButton> */}
           </form>
         </div>
+
       </div>
     </div>
   );
