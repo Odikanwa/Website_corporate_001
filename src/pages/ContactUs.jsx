@@ -1,7 +1,9 @@
 import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup"
-import * as yup from "yup"
+import * as yup from "yup";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import RoundedButton from "../components/RoundedButton";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
@@ -11,7 +13,6 @@ import emailjs from "@emailjs/browser";
 // SERVICE ID
 // TEMPLATE ID
 // PUBLIC KEY
-
 
 const schema = yup
   .object({
@@ -41,8 +42,6 @@ const ContactUs = () => {
 
   const sendEmail = () => {
     // e.preventDefault();
-    
-
     emailjs
       .sendForm(
         "service_fzsjbbc",
@@ -54,6 +53,8 @@ const ContactUs = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
+          notify();
+          clearForm();
         },
         (error) => {
           console.log(error.text);
@@ -62,28 +63,16 @@ const ContactUs = () => {
       );
   };
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-    
+  const clearForm = () => {
+    document.getElementById('company_name').value = " ";
+    document.getElementById('company_address').value = " ";
+    document.getElementById('user_email').value = " ";
+    document.getElementById('user_number').value = " ";
+    document.getElementById('service_type').value = " ";
+    document.getElementById('message').value = " ";
+  }
 
-  //   emailjs
-  //     .sendForm(
-  //       "service_fzsjbbc",
-  //       "template_dwxsz1c",
-  //       form.current,
-  //       "6sEnbw6wCMpCWHANw"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //         console.log("message sent");
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //         console.log("message failed");
-  //       }
-  //     );
-  // };
+  const notify = () => toast("Hi there! Your mail has been sent.");
 
   return (
     <div className="h-auto w-[100vw]  text-[15px]">
@@ -98,6 +87,9 @@ const ContactUs = () => {
           </p>
         </div>
       </div>
+
+      <ToastContainer />
+      
       <div className="h-auto lg:h-auto w-[100vw] bg-[#F8F8FF] flex flex-col lg:flex-row justify-center gap-[8vw] pb-[10vh]">
         <div
           className={`h-auto w-[90vw] lg:w-[30vw] flex flex-col gap-[5vh] justify-center place-content-center text-center mt-[-10vh]`}
@@ -139,6 +131,7 @@ const ContactUs = () => {
             <input
               {...register("company_name")}
               type="text"
+              id="company_name"
               name="company_name"
               placeholder="Company Name"
               className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] text-black border-[1px] shadow-lg bg-white form-shadow`}
@@ -146,6 +139,7 @@ const ContactUs = () => {
             <p className="text-red-500">{errors.company_name?.message}</p>
             <input
               {...register("company_address")}
+              id="company_address"
               type="text"
               name="company_address"
               placeholder="Company Address"
@@ -154,6 +148,7 @@ const ContactUs = () => {
             <p className="text-red-500">{errors.company_address?.message}</p>
             <input
               {...register("user_email")}
+              id="user_email"
               type="email"
               name="user_email"
               placeholder="Work Email"
@@ -162,6 +157,7 @@ const ContactUs = () => {
             <p className="text-red-500">{errors.user_email?.message}</p>
             <input
               {...register("user_number")}
+              id="user_number"
               type="text"
               name="user_number"
               placeholder="Phone Number"
@@ -170,6 +166,7 @@ const ContactUs = () => {
             <p className="text-red-500">{errors.user_number?.message}</p>
             <select 
             {...register("service_type")}
+            id="service_type"
             name="service_type"
               className={`w-full h-auto pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[40px] text-black border-[1px] shadow-lg bg-white form-shadow`}
             >
@@ -187,6 +184,7 @@ const ContactUs = () => {
             <p className="text-red-500">{errors.service_type?.message}</p>
             <textarea
               {...register("message")}
+              id="message"
               name="message"
               placeholder="Your request"
               className={`w-full pl-[6vw] lg:pl-[2vw] py-[10px] mb-[2vh] rounded-[10px] text-black border-[1px] shadow-lg bg-white form-shadow`}
