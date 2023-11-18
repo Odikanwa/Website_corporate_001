@@ -106,12 +106,12 @@ const WebsiteDev = () => {
           </h1>
 
           <div className="flex flex-row justify-center place-content-center">
-            <div className="h-auto basis-1/2 ml-[5vw] lg:ml-0 mr-[5vw] text-black bg-[url('../src/assets/bg3.jpg')] border-[3px] drop-shadow-xl shadow-lg border-white rounded-[100px]">
+            <div className={`h-auto basis-1/2 ml-[5vw] lg:ml-0 mr-[5vw] text-black bg-[url('../src/assets/bg3.jpg')] border-[3px] drop-shadow-xl shadow-lg border-white rounded-[100px]`}>
               <BenefitCard />
             </div>
             <div
               className={` ${
-                window.innerWidth < 600 ? "hidden" : "basis-1/2  ml-[5vw]"
+                window.innerWidth <= 768 ? "hidden" : "basis-1/2  ml-[5vw]"
               } `}
             >
               <img

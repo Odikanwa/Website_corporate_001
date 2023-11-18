@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks, services } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, menu} from "../assets";
 // import { DropdownContext } from "../contexts/DropdownContext";
 import { useDropdownContext } from "../contexts/DropdownContext";
 import GoToTop from "./GoToTop";

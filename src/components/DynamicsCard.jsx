@@ -44,18 +44,13 @@ function SamplePrevArrow(props) {
 }
 
 const DynamicsCards = () => {
-  const { modalOpen, setModalOpen } = useModalContext();
+  const { setModalOpen } = useModalContext();
   const [modal, setModal] = useState({
     id: 0,
     icon: null,
     title: "",
     desc: "",
   });
-
-  // const onLearnMoreClick = (id) => {
-  //   setModalOpen(!modalOpen);
-  //   setModalId(id);
-  // }
 
   const settings = {
     className: "center",
@@ -69,20 +64,31 @@ const DynamicsCards = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          infinite: true,
+          dots: false,
         },
       },
       {
@@ -91,14 +97,16 @@ const DynamicsCards = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           dots: false,
+          infinite: true,
         },
       },
       {
         breakpoint: 300,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
+          infinite: true,
         },
       },
     ],
@@ -106,12 +114,11 @@ const DynamicsCards = () => {
 
   return (
     <div className="w-[100vw] mt-[5vh]">
-      {/* <h2 className="font-bold"> See Available Offerings &gt; &gt; </h2> */}
       <Slider {...settings}>
         {dynamics_module.map((module) => (
           <>
             <div key={module.id} className="w-[100vw] mt-[5vh]">
-              <div className="h-[50vh] lg:h-[25vw] w-[45vw] lg:w-[20vw] mb-[2vh] flex flex-col flex-1 text-xs bg-white py-[5vh] px-[3vw] box-shadow2 drop-shadow-lg shadow-lg box-border justify-center place-content-center place-items-center text-center border-white rounded-[20px]">
+              <div className="h-[50vh] md:h-[50vh] xl:h-[25vw] w-[45vw] xl:w-[20vw] mb-[2vh] flex flex-col flex-1 text-xs bg-white py-[5vh] px-[3vw] box-shadow2 drop-shadow-lg shadow-lg box-border justify-center place-content-center place-items-center text-center border-white rounded-[20px]">
                 <img
                   src={module.icon}
                   alt="Dynamics 365 Icon"
@@ -133,12 +140,9 @@ const DynamicsCards = () => {
                 >
                   Learn More &gt; &gt;
                 </p>
-                {/* <div className="w-[100%] ml-[30%] absolute bottom-0 mb-[3vh]"><SmallRoundedButton>Learn More</SmallRoundedButton></div> */}
+                
               </div>
             </div>
-            {/* {
-              dynamics_module.filter((item) => module.id == item.id)
-            } */}
           </>
         ))}
       </Slider>
