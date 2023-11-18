@@ -20,7 +20,7 @@ const RootLayout = () => {
           <Navbar />
         </header>
 
-        <div className="hidden lg:flex m-0 absolute inset-0 top-[9%] left-[70%] text-center max-w-0 lg:max-w-7xl items-start">
+        <div className="hidden md:flex m-0 absolute inset-0 top-[9%] left-[70%] text-center max-w-0 lg:max-w-7xl items-start">
           <Dropdown />
         </div>
 

@@ -67,10 +67,10 @@ const Navbar = () => {
             alt="logo"
             width={125}
             height={95}
-            className=" object-contain mt-0 pt-0"
+            className="object-contain mt-0 pt-0"
           />
         </Link>
-        <ul ref={navLinkRef} className="list-none hidden sm:flex flex-row gap-10">
+        <ul ref={navLinkRef} className="list-none hidden md:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -106,7 +106,7 @@ const Navbar = () => {
         </ul>
 
         {/* For Mobile Screens */}
-        <div ref={mobileNavLinkRef} className="flex lg:hidden flex-1 justify-end items-center z-23 inset-0">
+        <div ref={mobileNavLinkRef} className="flex md:hidden flex-1 justify-end items-center z-23 inset-0">
           <img
             // src={toggle? close : menu}
             src={menu}

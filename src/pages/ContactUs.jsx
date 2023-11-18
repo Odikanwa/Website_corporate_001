@@ -91,7 +91,7 @@ const ContactUs = () => {
         <div
           className={`h-auto w-[90vw] lg:w-[30vw] flex flex-col gap-[5vh] justify-center place-content-center text-center mt-[-10vh]`}
         >
-          <div className="w-full flex flex-row justify-center place-content-center gap-[10%] align-middle ml-[5vw] border-[2px] py-[5vh] px-[3vw] rounded-[15px] bg-white box-shadow2 shadow-lg">
+          <div className="w-full md:w-[70vw] lg:w-full flex flex-row justify-center place-self-center place-content-center gap-[10%] align-middle ml-[5vw] border-[2px] py-[5vh] px-[3vw] rounded-[15px] bg-white box-shadow2 shadow-lg">
             <div className="justify-center place-content-center align-middle">
               <BsFillTelephoneOutboundFill className="justify-center place-content-center align-middle p-[8px] text-[45px] text-orange-500 border-[2px] border-orange-500 rounded-[200px]" />
             </div>
@@ -102,7 +102,7 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="w-full flex flex-row justify-center place-content-center ml-[5vw] gap-[10%] align-middle border-[2px] py-[5vh] px-[3vw] rounded-[15px] bg-white box-shadow2 shadow-lg">
+          <div className="w-full md:w-[70vw] lg:w-full flex flex-row justify-center place-self-center place-content-center ml-[5vw] gap-[10%] align-middle border-[2px] py-[5vh] px-[3vw] rounded-[15px] bg-white box-shadow2 shadow-lg">
             <div className="justify-center place-content-center align-middle">
               <BiSupport className="justify-center place-content-center align-middle p-[8px] text-[45px] text-orange-500 border-[2px] border-orange-500 rounded-[200px]" />
             </div>
@@ -115,7 +115,7 @@ const ContactUs = () => {
         </div>
 
         <div
-          className={`h-auto w-[90vw] lg:w-[30vw] ml-[5vw] bg-white border-[2px] flex flex-col py-[5vh] px-[5vw] lg:px-[3vw] justify-center place-content-center text-center mt-[10vh] lg:mt-[-10vh] rounded-[15px] box-shadow2 shadow-lg`}
+          className={`h-auto w-[90vw] md:w-[70vw] lg:w-[35vw] md:ml-[-5vw] lg:ml-[5vw] bg-white border-[2px] flex flex-col place-self-center py-[5vh] px-[5vw] md:px-[10vw] lg:px-[5vw] justify-center place-content-center text-center mt-[5vh] lg:mt-[-10vh] rounded-[15px] box-shadow2 shadow-lg`}
         >
           <form ref={form} onSubmit={handleSubmit(sendEmail)}>
             {/* <Header /> */}

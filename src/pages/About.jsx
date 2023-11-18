@@ -2,7 +2,7 @@ import { logo } from "../assets";
 import RoundedButton from "../components/RoundedButton";
 import BenefitCard from "../components/BenefitCard";
 import { NavLink } from "react-router-dom";
-import { styles } from "../styles";
+// import { styles } from "../styles";
 import About_Component from "../components/About";
 
 const About = () => {
