@@ -20,6 +20,7 @@ import { Helmet } from "react-helmet";
 import Services from "./pages/Services";
 import ManagedWifiPage from "./pages/ManagedWifi";
 import SignIn from "./pages/auth/Sign_in/SignIn";
+import Portal from "./pages/portal/Portal";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
       <Route path="services" element={<Services />} />
       <Route path="surveillance" element={<Surveillance />} />
       <Route path="signin" element={<SignIn/>}/>
+      <Route path="portal" element={<Portal/>}/>
     </Route>
   )
 );

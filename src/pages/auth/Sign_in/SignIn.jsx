@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 // import RoundedButton from "../components/RoundedButton";
 import { BsPerson } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
-import { redirect } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 
 // SERVICE ID
 // TEMPLATE ID
@@ -32,6 +32,8 @@ const SignIn = () => {
     resolver: yupResolver(schema),
   });
 
+  const navigate = useNavigate();
+
   const goToPortal = () => {
     // e.preventDefault();
     // Use axios to fetch data from db
@@ -49,7 +51,8 @@ const SignIn = () => {
       //     console.log("Login failed");
       //   }
       // );
-      redirect("/portal");
+
+      navigate("/portal");
       console.log("unavailable now")
   };
 

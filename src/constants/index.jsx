@@ -72,8 +72,12 @@ import {
   BsHourglassSplit,
   BsSearch,
   BsShieldFillCheck,
+  BsBinocularsFill,
+  BsPerson,
+  BsTicket,
+  BsTagsFill,
 } from "react-icons/bs";
-import { MdOutlineJoinFull, MdOutlineSecurity, MdContactSupport, MdUpdate } from "react-icons/md";
+import { MdOutlineJoinFull, MdOutlineSecurity, MdContactSupport, MdUpdate, MdEmail, MdShoppingCart } from "react-icons/md";
 import {
   FaRecycle,
   FaHandshake,
@@ -886,6 +890,44 @@ const benefits_website_chooseUs = [
   },
 ]
 
+const crm = [
+  {
+    id: 0,
+    icon: <BsBinocularsFill className="h-[20px] lg:h-[20px] w-[20px] lg:w-[20px]"/>,
+    title: "Leads",
+  },
+  {
+    id: 1,
+    icon: <BsPerson className="h-250px] lg:h-[20px] w-[20px] lg:w-[20px]"/>,
+    title: "Customers"
+  },
+  {
+    id: 2,
+    icon: <BsTicket className="h-[20px] lg:h-[20px] w-[20px] lg:w-[20px]"/>,
+    title: "Tickets",
+  },
+  {
+    id: 3,
+    icon: <BsCoin className="h-[20px] lg:h-[20px] w-[20px] lg:w-[20px]"/>,
+    title: "Finances",
+  },
+  {
+    id: 4,
+    icon: <BsTagsFill className="h-[20px] lg:h-[20px] w-[20px] lg:w-[20px]"/>,
+    title: "Pricing",
+  },
+  {
+    id: 5,
+    icon: <MdEmail className="h-[20px] lg:h-[20px] w-[20px] lg:w-[20px]"/>,
+    title: "Mails",
+  },
+  {
+    id: 6,
+    icon: <MdShoppingCart className="h-[20px] lg:h-[20px] w-[20px] lg:w-[20px]"/>,
+    title: "Products",
+  },
+]
+
 export {
   services,
   microsoft_365,
@@ -903,4 +945,5 @@ export {
   benefits_managedWifi_chooseUs,
   benefits_website,
   benefits_website_chooseUs,
+  crm,
 };
