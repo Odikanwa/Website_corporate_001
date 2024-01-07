@@ -19,6 +19,7 @@ import Lan from "./pages/Lan";
 import { Helmet } from "react-helmet";
 import Services from "./pages/Services";
 import ManagedWifiPage from "./pages/ManagedWifi";
+import SignIn from "./pages/auth/Sign_in/SignIn";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
       <Route path="managedwifi" element={<ManagedWifiPage />} />
       <Route path="services" element={<Services />} />
       <Route path="surveillance" element={<Surveillance />} />
+      <Route path="signin" element={<SignIn/>}/>
     </Route>
   )
 );

@@ -104,10 +104,10 @@ export const navLinks = [
     id: "partners",
     title: "Partners",
   },
-  // {
-  //   id: "projects",
-  //   title: "Projects",
-  // },
+  {
+    id: "signin",
+    title: "Sign In",
+  },
   {
     id: "services",
     title: "Services",
